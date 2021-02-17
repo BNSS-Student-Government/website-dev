@@ -54,3 +54,6 @@
         padding: 0.3rem 0.6rem;
     }
 }
+.nav-link .dropdown-toggle {
+    outline: none;
+}
