@@ -32,7 +32,15 @@
                     <ul class="navbar-nav text-uppercase ml-auto">
 <!--                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Events</a></li>-->
 <!--                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Clubs</a></li>-->
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Elections</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Elections</a>
+                            <div class="dropdown-menu" id="elections-menu">
+                                <a class="dropdown-item" href="#">Apply</a>
+                                <a class="dropdown-item" href="#">Candidates</a>
+                                <a class="dropdown-item" href="#">Campaigns</a>
+                                <a class="dropdown-item" href="#">Vote</a>
+                            </div>
+                        </li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">FAQ</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
                     </ul>
@@ -41,10 +49,10 @@
         </nav>
         <!-- Masthead-->
         <header class="masthead">
-            <div class="container">
+            <div class="container" id="home-container">
                 <div class="masthead-heading text-uppercase">Burnaby North Student Government</div>
                 <div class="masthead-subheading">Official Website</div>
-                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#team">See Current Members</a>
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" id="home-big-button" href="#team">See Current Members</a>
             </div>
         </header>
         <!-- Services-->
