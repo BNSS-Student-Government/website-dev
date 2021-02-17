@@ -2441,18 +2441,20 @@ fieldset:disabled a.btn {
 .btn-primary {
   color: #fff;
   background-color: #73001D;
-  border-color: #73001D;
+  /*border-color: #73001D;*/
+  border-radius: 50px;
 }
 .btn-primary:hover {
   color: #73001D;
   background-color: #fec810;
-  border-color: #fec503;
+  /*border-color: #fec503;*/
 }
 .btn-primary:focus, .btn-primary.focus {
-  color: #fff;
-  background-color: #fec810;
-  border-color: #fec503;
-  box-shadow: 0 0 0 0.2rem rgba(254, 216, 84, 0.5);
+  /*color: #73001D;*/
+  /*background-color: #fec810;*/
+  /*border-color: #fec503;*/
+  /*box-shadow: 0 0 0 0.2rem rgba(254, 216, 84, 0.5);*/
+  box-shadow: none;
 }
 .btn-primary.disabled, .btn-primary:disabled {
   color: #fff;
@@ -2464,9 +2466,9 @@ fieldset:disabled a.btn {
   background-color: #fec503;
   border-color: #f3bd01;
 }
-.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(254, 216, 84, 0.5);
-}
+/*.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus {*/
+/*  box-shadow: 0 0 0 0.2rem rgba(254, 216, 84, 0.5);*/
+/*}*/
 
 .btn-secondary {
   color: #fff;
@@ -10059,6 +10061,7 @@ img::-moz-selection {
   color: #fff;
   text-transform: uppercase;
   background-color: #73001D;
+  border-radius: 25px;
   border: 0;
 }
 #mainNav .navbar-brand {

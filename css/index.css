@@ -8,3 +8,10 @@
     display: block;
     background: rgba(0, 0, 0, .6);
 }
+#sidenav-button {
+    outline: none;
+}
+#sidenav-button:hover {
+    color: #73001D;
+    background-color: #fec810;
+}
