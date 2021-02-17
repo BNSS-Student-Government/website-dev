@@ -57,3 +57,6 @@
 .nav-link .dropdown-toggle {
     outline: none;
 }
+.gov-member {
+    width: fit-content;
+}
