@@ -10126,13 +10126,18 @@ header.masthead {
   width: 100%;
   text-align: center;
   color: #fff;
-  background-image: url("../assets/img/burnaby-north-secondary-school.jpg");
   background-color: rgba(0, 0, 0, 0.6);
   background-blend-mode: overlay;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
+}
+header.masthead.home {
+  background-image: url("../assets/img/backgrounds/burnaby-north-secondary-school.jpg");
+}
+header.masthead.apply {
+  background-image: url("../assets/img/candids/Gov't-12.jpg");
 }
 header.masthead .masthead-subheading {
   font-size: 1.5rem;
@@ -10434,7 +10439,7 @@ header.masthead .masthead-heading {
 
 section#contact {
   background-color: #212529;
-  background-image: url("../assets/img/map-image.png");
+  background-image: url("../assets/img/archive/map-image.png");
   background-repeat: no-repeat;
   background-position: center;
 }
