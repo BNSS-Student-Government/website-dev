@@ -10139,6 +10139,9 @@ header.masthead.home {
 header.masthead.apply {
   background-image: url("../assets/img/candids/Gov't-12.jpg");
 }
+header.masthead.construction {
+  background-image: url("../assets/img/backgrounds/under-construction.jpg");
+}
 header.masthead .masthead-subheading {
   font-size: 1.5rem;
   font-style: italic;

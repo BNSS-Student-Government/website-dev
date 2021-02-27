@@ -5,6 +5,12 @@
     */
     (function ($) {
     "use strict"; // Start of use strict
+        if (
+            document.URL.includes("elections/campaigns/") ||
+            document.URL.includes("elections/vote/")
+        ) {
+            window.location.replace("../../construction/");
+        }
 
     // Smooth scrolling using jQuery easing
     $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
