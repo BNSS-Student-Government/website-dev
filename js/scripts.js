@@ -6,10 +6,15 @@
     (function ($) {
     "use strict"; // Start of use strict
         if (
-            document.URL.includes("elections/campaigns/") ||
-            document.URL.includes("elections/vote/")
+            document.URL.includes("campaigns") ||
+            document.URL.includes("vote")
         ) {
             window.location.replace("../../construction/");
+        }
+        if (
+            document.URL.includes("faq")
+        ) {
+            window.location.replace("../construction/");
         }
 
     // Smooth scrolling using jQuery easing
