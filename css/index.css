@@ -114,8 +114,9 @@
 .accordion {
     max-width: 800px;
 	padding: 50px;
-    margin-left: 2px;
-    margin-right: 2px;
+    margin: 0 auto;
+    padding-left: 2px;
+    padding-right: 2px;
 }
 
 .accordion-trigger {
