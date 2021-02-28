@@ -62,21 +62,29 @@
 }
 
 /* Add responsive CSS here */
-@media (min-width: 376px) {
+@media(max-width: 575px) {
+    .portfolio-caption-heading {
+        font-size: 0.4rem;
+    }
     #home-big-button {
         font-size: 1rem;
     }
 }
-/*@media (min-width: 768px) {*/
-/*    #home-big-button {*/
-/*        font-size: 1.25rem;*/
-/*    }*/
-/*}*/
-/*@media (min-width: 992px) {*/
-/*    #home-big-button {*/
-/*        font-size: 1.25rem;*/
-/*    }*/
-/*}*/
+@media (min-width: 576px) {
+    .portfolio-caption-heading {
+        font-size: 0.6rem;
+    }
+}
+@media (min-width: 768px) {
+    .portfolio-caption-heading {
+        font-size: 0.8rem;
+    }
+}
+@media (min-width: 992px) {
+    .portfolio-caption-heading {
+        font-size: 1rem;
+    }
+}
 @media (min-width: 1200px) {
     #home-big-button {
         font-size: 1.30rem;
