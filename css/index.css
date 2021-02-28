@@ -60,3 +60,25 @@
 .gov-member {
     width: fit-content;
 }
+
+/* Add responsive CSS here */
+@media (min-width: 576px) {
+    #home-big-button {
+        font-size: 1rem;
+    }
+}
+@media (min-width: 768px) {
+    #home-big-button {
+        font-size: 1.25rem;
+    }
+}
+@media (min-width: 992px) {
+    #home-big-button {
+        font-size: 1.25rem;
+    }
+}
+@media (min-width: 1200px) {
+    #home-big-button {
+        font-size: 1.30rem;
+    }
+}
