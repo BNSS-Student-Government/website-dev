@@ -69,10 +69,19 @@
     #home-big-button {
         font-size: 1rem;
     }
+    .portfolio-modal .modal-content h2 {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
 }
 @media (min-width: 576px) {
     #portfolio .portfolio-item .portfolio-caption .portfolio-caption-heading {
         font-size: 0.85rem;
+    }
+    .portfolio-modal .modal-content {
+        width: fit-content;
+        height: fit-content;
+        margin: auto;
     }
 }
 @media (min-width: 768px) {
