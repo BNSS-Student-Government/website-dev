@@ -62,7 +62,7 @@
 }
 
 /* Add responsive CSS here */
-@media (min-width: 576px) {
+@media (min-width: 376px) {
     #home-big-button {
         font-size: 1rem;
     }
