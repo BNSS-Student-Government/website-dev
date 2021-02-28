@@ -64,7 +64,7 @@
 /* Add responsive CSS here */
 @media(max-width: 575px) {
     #portfolio .portfolio-item .portfolio-caption .portfolio-caption-heading {
-        font-size: 0.4rem;
+        font-size: 0.7rem;
     }
     #home-big-button {
         font-size: 1rem;
@@ -72,24 +72,24 @@
 }
 @media (min-width: 576px) {
     #portfolio .portfolio-item .portfolio-caption .portfolio-caption-heading {
-        font-size: 0.6rem;
+        font-size: 0.85rem;
     }
 }
 @media (min-width: 768px) {
     #portfolio .portfolio-item .portfolio-caption .portfolio-caption-heading {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 }
 @media (min-width: 992px) {
     #portfolio .portfolio-item .portfolio-caption .portfolio-caption-heading {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 }
 @media (min-width: 1200px) {
     #home-big-button {
-        font-size: 1.30rem;
+        font-size: 1.3rem;
     }
     #portfolio .portfolio-item .portfolio-caption .portfolio-caption-heading {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 }
