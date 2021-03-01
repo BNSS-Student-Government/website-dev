@@ -155,5 +155,5 @@
 	position: absolute;
 }
 .accordion-hide:checked + .accordion-container {
-	height: 250px;
+    height: auto; /*auto breaks transition but resolves mobile view issue*/
 }
