@@ -47,10 +47,10 @@
 }
 @media (min-width: 992px) {
     #elections-menu {
-        background-color: rgba(13, 15, 16, 0.4);
+        background-color: rgba(13, 15, 16, 0.8);
     }
     #elections-menu .dropdown-item {
-        background-color: rgba(13, 15, 16, 0.4);
+        background-color: rgba(13, 15, 16, 0.8);
         padding: 0.3rem 0.6rem;
     }
 }
