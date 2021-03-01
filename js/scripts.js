@@ -18,6 +18,11 @@
             window.location.replace("../construction/");
         }
         */
+        $(document).ready(function (){
+            $(".accordion-trigger").click(function (){
+                $('html, body').scrollTop( $(this).offset().top + "5rem");
+            });
+        });
     // Smooth scrolling using jQuery easing
     $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
         if (
