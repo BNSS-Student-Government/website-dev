@@ -150,5 +150,5 @@
 	position: absolute;
 }
 .accordion-hide:checked + .accordion-container {
-	height: 200px;
+	height: auto;
 }
