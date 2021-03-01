@@ -10038,7 +10038,7 @@ img::-moz-selection {
   padding: 1.25rem 2.5rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1.125rem;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .btn-social {
