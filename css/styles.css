@@ -10141,6 +10141,15 @@ header.masthead.home {
 header.masthead.apply {
   background-image: url("../assets/img/candids/Gov't-12.jpg");
 }
+header.masthead.faq {
+  height: auto;
+  padding-top: 10rem;
+  padding-bottom: 1rem;
+  background: #0f1113;
+}
+header.masthead.faq.masthead-heading {
+  font-size: 3rem;
+}
 header.masthead.construction {
   background-image: url("../assets/img/backgrounds/under-construction.jpg");
 }

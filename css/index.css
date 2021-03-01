@@ -146,6 +146,7 @@
 	height: 0;
 	overflow: hidden;
 	margin-bottom: 6px;
+    color: #e3e2e2;
 }
 .accordion-container p {
 	margin:20px;
