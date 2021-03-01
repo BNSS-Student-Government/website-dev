@@ -94,12 +94,17 @@
 }
 @media (min-width: 768px) {
     #portfolio .portfolio-item .portfolio-caption .portfolio-caption-heading {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 }
 @media (min-width: 992px) {
     #portfolio .portfolio-item .portfolio-caption .portfolio-caption-heading {
-        font-size: 1.1rem;
+        font-size: 0.8rem;
+    }
+}
+@media(min-width: 1050px) {
+    #portfolio .portfolio-item .portfolio-caption .portfolio-caption-heading {
+        font-size: 0.8rem;
     }
 }
 @media (min-width: 1200px) {
@@ -107,7 +112,7 @@
         font-size: 1.3rem;
     }
     #portfolio .portfolio-item .portfolio-caption .portfolio-caption-heading {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 }
 
