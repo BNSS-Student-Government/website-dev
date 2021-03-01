@@ -2980,11 +2980,11 @@ input[type=button].btn-block {
 }
 
 .dropdown-menu {
-  position: absolute;
+  position: relative /*absolute*/;
   top: 100%;
   left: 0;
   z-index: 1000;
-  display: none;
+  display: block /*none*/;
   float: left;
   min-width: 10rem;
   padding: 0.5rem 0;
@@ -3142,6 +3142,8 @@ input[type=button].btn-block {
 }
 
 .dropdown-item {
+  position: absolute;
+  overflow: hidden;
   display: block;
   width: 100%;
   padding: 0.25rem 1.5rem;
