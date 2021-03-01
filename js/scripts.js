@@ -7,7 +7,8 @@
     "use strict"; // Start of use strict
         if (
             document.URL.includes("campaigns") ||
-            document.URL.includes("vote")
+            document.URL.includes("vote") ||
+            document.URL.includes("candidates")
         ) {
             window.location.replace("../../construction/");
         }
@@ -18,11 +19,6 @@
             window.location.replace("../construction/");
         }
         */
-        $(document).ready(function (){
-            $(".accordion-trigger").click(function (){
-                $('html, body').scrollTop( $(this).offset().top + "5rem");
-            });
-        });
     // Smooth scrolling using jQuery easing
     $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
         if (
