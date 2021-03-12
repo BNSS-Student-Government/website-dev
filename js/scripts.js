@@ -6,7 +6,6 @@
     (function ($) {
     "use strict"; // Start of use strict
         if (
-            document.URL.includes("campaigns") ||
             document.URL.includes("vote") ||
             document.URL.includes("candidates")
         ) {

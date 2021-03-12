@@ -3169,7 +3169,7 @@ input[type=button].btn-block {
 }
 
 .dropdown-menu.show {
-  display: block;
+  display: grid;
 }
 
 .dropdown-header {
