@@ -161,3 +161,16 @@
 .accordion-hide:checked + .accordion-container {
     height: auto; /*auto breaks transition but resolves mobile view issue*/
 }
+
+/* Make campaign page content scale better for narrow screens */
+@media(max-width: 575px) {
+    .watch-campaign {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        line-height: 1.25;
+        border-radius: 2rem;
+    }
+    .page-section h2.section-heading {
+        font-size: 2rem;
+    }
+}
