@@ -10155,6 +10155,9 @@ header.masthead.construction {
 header.masthead.contact {
   background-image: url("../assets/img/candids/Gov_t-4.jpg");
 }
+header.masthead.candidates {
+  background-image: url("../assets/img/candids/Gov_t-1.jpg");
+}
 header.masthead .masthead-subheading {
   font-size: 1.5rem;
   font-style: italic;
