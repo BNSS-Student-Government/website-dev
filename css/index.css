@@ -51,12 +51,12 @@
         /*padding: 0.3rem 0;*/
     }
     #elections-menu .dropdown-item {
-        background-color: rgba(13, 15, 16, 0.8);
+        background-color: rgba(13, 15, 16, 0.9);
         padding: 0.3rem 0.6rem;
     }
-    #elections-menu .dropdown-item:hover {
-        background-color: rgba(13, 15, 16, 0.9);
-    }
+    /*#elections-menu .dropdown-item:hover {*/
+    /*    background-color: rgba(13, 15, 16, 0.9);*/
+    /*}*/
 }
 .nav-link .dropdown-toggle {
     outline: none;
