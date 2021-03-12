@@ -10139,7 +10139,7 @@ header.masthead.home {
   background-image: url("../assets/img/backgrounds/burnaby-north-secondary-school.jpg");
 }
 header.masthead.apply {
-  background-image: url("../assets/img/candids/Gov't-12.jpg");
+  background-image: url("../assets/img/candids/Gov_t-12.jpg");
 }
 header.masthead.faq {
   height: auto;
@@ -10152,6 +10152,9 @@ header.masthead.faq.masthead-heading {
 }
 header.masthead.construction {
   background-image: url("../assets/img/backgrounds/under-construction.jpg");
+}
+header.masthead.contact {
+  background-image: url("../assets/img/candids/Gov_t-4.jpg");
 }
 header.masthead .masthead-subheading {
   font-size: 1.5rem;
@@ -10167,11 +10170,43 @@ header.masthead .masthead-heading {
   margin-bottom: 1rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-
+@media (max-width: 575px) {
+  header.masthead {
+    padding-top: 50%;
+  }
+  header.masthead .masthead-subheading {
+    font-size: 1rem;
+    font-style: italic;
+    line-height: 1rem;
+    margin-bottom: 2rem;
+  }
+  header.masthead .masthead-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+@media (min-width: 576px) {
+  header.masthead {
+    padding-top: 30%;
+  }
+  header.masthead .masthead-subheading {
+    font-size: 1.8rem;
+    font-style: italic;
+    line-height: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  header.masthead .masthead-heading {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 4rem;
+    margin-bottom: 2rem;
+  }
+}
 @media (min-width: 768px) {
   header.masthead {
-    padding-top: 17rem;
-    padding-bottom: 12.5rem;
+    padding-top: 20%;
   }
   header.masthead .masthead-subheading {
     font-size: 2.25rem;
@@ -10184,6 +10219,16 @@ header.masthead .masthead-heading {
     font-weight: 700;
     line-height: 4.5rem;
     margin-bottom: 2rem;
+  }
+}
+@media (min-width: 992px) {
+  header.masthead {
+    padding-top: 15%;
+  }
+}
+@media (min-width: 1200px) {
+  header.masthead {
+    padding-top: 15%;
   }
 }
 #portfolio .portfolio-item {
