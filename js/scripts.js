@@ -6,17 +6,11 @@
     (function ($) {
     "use strict"; // Start of use strict
         if (
-            document.URL.includes("vote")
+            document.URL.includes("vote") ||
+            document.URL.includes("candidate")
         ) {
             window.location.replace("../../construction/");
         }
-        /*
-        if (
-            document.URL.includes("faq")
-        ) {
-            window.location.replace("../construction/");
-        }
-        */
     // Smooth scrolling using jQuery easing
     $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
         if (
