@@ -2905,6 +2905,14 @@ fieldset:disabled a.btn {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+.btn-md, .btn-group-md > .btn {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  line-height: 1.2;
+  border-radius: 2.5rem;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
 .btn-sm, .btn-group-sm > .btn {
   padding: 0.25rem 0.8rem;
   font-size: 0.8rem;
@@ -10139,6 +10147,9 @@ header.masthead.home {
 }
 header.masthead.apply {
   background-image: url("../assets/img/candids/Gov_t-12.jpg");
+}
+header.masthead.campaign {
+  background-image: url("../assets/img/candids/Gov_t-2.jpg")
 }
 header.masthead.faq {
   height: auto;
