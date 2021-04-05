@@ -6,8 +6,7 @@
     (function ($) {
     "use strict"; // Start of use strict
         if (
-            document.URL.includes("vote") ||
-            document.URL.includes("candidate")
+            document.URL.includes("vote")
         ) {
             window.location.replace("../../construction/");
         }
