@@ -174,3 +174,9 @@
         font-size: 2rem;
     }
 }
+
+#voting-system-video {
+    max-width: 100%;
+    width: auto;
+    height: 100%;
+}
