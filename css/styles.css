@@ -10169,6 +10169,9 @@ header.masthead.contact {
 header.masthead.candidates {
   background-image: url("../assets/img/candids/Gov_t-1.jpg");
 }
+header.masthead.vote {
+  background-image: url("../assets/img/candids/Gov_t-15.jpg");
+}
 header.masthead .masthead-subheading {
   font-size: 1.5rem;
   font-style: italic;
