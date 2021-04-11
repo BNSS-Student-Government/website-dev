@@ -1,2 +1,2 @@
 # website-dev
-The developmental stage of the website. 
+The developmental stages of Burnaby North's Student Government website. 
