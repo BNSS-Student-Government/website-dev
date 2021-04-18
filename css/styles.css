@@ -10088,6 +10088,7 @@ img::-moz-selection {
   font-size: 0.95rem;
   color: #fff;
   letter-spacing: 0.0625em;
+  outline: none;
 }
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
   color: #fed136;
@@ -10258,6 +10259,8 @@ header.masthead .masthead-heading {
   margin: 0 auto;
 }
 #portfolio .portfolio-item .portfolio-link .portfolio-hover {
+  top: 0;
+  left: 0;
   display: flex;
   position: absolute;
   width: 100%;
