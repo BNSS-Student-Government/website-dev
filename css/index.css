@@ -180,3 +180,16 @@
     width: auto;
     height: 100%;
 }
+
+/* Election Winner CSS */
+.winner-picture, .winner-div {
+    position: relative;
+    left: 0;
+    top: 0;
+}
+.winner-banner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5; /* remove if you prefer the "winner" banner to be under the yellow box */
+}
