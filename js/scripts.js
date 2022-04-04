@@ -5,11 +5,11 @@
     */
     (function ($) {
     "use strict"; // Start of use strict
-        if (
+        if (/*
             document.URL.includes("apply") ||
             document.URL.includes("candidates") ||
             document.URL.includes("campaign") ||
-            document.URL.includes("vote")
+            document.URL.includes("vote")*/
         ) {
             window.location.replace("../../construction/");
         }
