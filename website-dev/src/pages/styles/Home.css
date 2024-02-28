@@ -1,0 +1,59 @@
+.btn-down-arrow{
+    width: 50px;
+    height: 50px;
+    background-color:rgba(0, 0, 0, 0) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.533);
+    transition: all 0.3s ease;
+    border: none;
+}
+.btn-down-arrow:hover{
+    color: white;
+    transform: translate(0, 5px) scale(1.1);
+    transition: all 0.3s ease;
+}
+
+#icon{
+    width: 20px;
+    height: 20px;
+}
+
+.about{
+    background-color: rgb(7, 7, 7);
+}
+
+.gradient-heading{
+    background: #FF6D44;
+    background: linear-gradient(to bottom right, #FF6D44 0%, #FFAE00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.logo{
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1;
+    background: #FF6D44;
+    background: linear-gradient(to bottom right, #FF6D44 0%, #FFAE00 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+.about-details{
+    display: flex;
+    width: 90%;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 0;
+}
+
+.featured{
+    background-color: "grey";
+}
