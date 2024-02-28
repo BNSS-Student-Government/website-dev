@@ -56,7 +56,7 @@ const Home = () => {
         }}
       >
         <h1 className="gradient-heading">
-          About Burnaby North's Studnet Government
+          About Burnaby North's Student Government
         </h1>
         <div className="about-details">
           {aboutDetails.map((detail) => (
