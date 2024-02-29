@@ -6,6 +6,7 @@ import Article from "../components/article/Article";
 import { FaHandshake } from "react-icons/fa";
 import { MdGroups3 } from "react-icons/md";
 import { RiMegaphoneFill } from "react-icons/ri";
+import { IoIosPeople } from "react-icons/io";
 
 const Home = () => {
   const about = useRef(null);
@@ -55,9 +56,11 @@ const Home = () => {
           flexDirection: "column",
         }}
       >
-        <h1 className="gradient-heading">
-          About Burnaby North's Student Government
-        </h1>
+        <div className="about-heading">
+          <h1 className="gradient-heading">
+            About Burnaby North's Student Government
+          </h1>
+        </div>
         <div className="about-details">
           {aboutDetails.map((detail) => (
             <Article width="300px" title={detail.title} paragraph={detail.body}>
@@ -66,21 +69,30 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <div
-        ref={featured}
-        className="featured"
-        style={{
-          height: "100vh",
-          paddingTop: "4rem",
-          alignItems: "center",
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
-        <h1 style={{ color: "#ff8944" }}>CURRENTLY FEATURED</h1>
-        <h2 style={{ margin: "unset", fontWeight: "200" }}>
-          Student Governemnt Elections
-        </h2>
+      <div ref={featured} className="featured">
+        <div className="featured-heading">
+          <h1 style={{ color: "#ff8944" }}>CURRENTLY FEATURED</h1>
+          <h2 style={{ margin: "unset", fontWeight: "200" }}>
+            Student Governemnt Elections
+          </h2>
+        </div>
+        <div className="featured-details">
+          <div style={{ fontSize: "1.1rem" }}>
+            The halls of Burnaby North Secondary School are pulsating with
+            excitement as the Student Government elections take center stage.
+            The campus will soon be adorned with colorful campaign posters, each
+            representing the unique vision of candidates vying for leadership
+            roles. As candidates passionately address issues ranging from
+            environmental sustainability to mental health, the elections not
+            only serve as a platform for student representation but also foster
+            a deeper understanding of democratic values. This is always an
+            exciting time of year!
+          </div>
+          <div className="info-btn">
+            <h2>View Candidates</h2>
+            <IoIosPeople id="icon" />
+          </div>
+        </div>
       </div>
     </>
   );

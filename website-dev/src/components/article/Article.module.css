@@ -10,3 +10,8 @@
     justify-content: center;
     color: black;
 }
+@media (max-width: 768px){
+    .article{
+        padding: 100px;
+    }
+} 

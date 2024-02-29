@@ -19,8 +19,8 @@ const Hero = ({ imageName, title, subTitle, children }) => {
   return (
     <div style={s}>
       <div className={styles.hero}>
-        <h1>{title}</h1>
-        <plaintext>{subTitle}</plaintext>
+        <h1 style={{ marginLeft: "1rem", marginRight: "1rem" }}>{title}</h1>
+        <plaintext className={styles.sub}>{subTitle}</plaintext>
         {children}
       </div>
     </div>
