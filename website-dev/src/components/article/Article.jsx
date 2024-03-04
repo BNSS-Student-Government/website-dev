@@ -16,6 +16,7 @@ const Article = ({ title, paragraph, children, width }) => {
         color: "white",
         textAlign: "center",
       }}
+      className={styles.article}
     >
       <div style={{ aspectRatio: 1, width: "40%" }}>{children}</div>
       <h2 style={{ marginBottom: 5, marginTop: 10 }}>{title}</h2>

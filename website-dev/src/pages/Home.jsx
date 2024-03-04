@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Hero from "../components/hero/Hero";
 import { SlArrowDown } from "react-icons/sl";
 import "./styles/Home.css";
@@ -8,7 +8,7 @@ import { MdGroups3 } from "react-icons/md";
 import { RiMegaphoneFill } from "react-icons/ri";
 import { IoIosPeople } from "react-icons/io";
 
-const Home = () => {
+const Home = ({ setScrollToFeatured }) => {
   const about = useRef(null);
   const featured = useRef(null);
   const scroll = (ref) => {
@@ -17,6 +17,7 @@ const Home = () => {
       behavior: "smooth",
     });
   };
+
   const aboutDetails = [
     {
       logo: <FaHandshake style={{ width: "80%", height: "80%" }} />,
@@ -88,7 +89,10 @@ const Home = () => {
             a deeper understanding of democratic values. This is always an
             exciting time of year!
           </div>
-          <div className="info-btn">
+          <div
+            onClick={() => window.location.assign("/Candidates")}
+            className="info-btn"
+          >
             <h2>View Candidates</h2>
             <IoIosPeople id="icon" />
           </div>

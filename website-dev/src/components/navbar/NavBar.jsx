@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./NavBar.module.css";
 import { GiVikingHelmet } from "react-icons/gi";
 
-const NavBar = () => {
+const NavBar = ({ scrollToFeatured }) => {
   return (
     <div className={styles.navbar}>
       <div className={styles.navLogo}>
@@ -10,9 +10,18 @@ const NavBar = () => {
       </div>
       <div className={styles.navItems}>
         <div className={styles.navLinks}>
-          <div className={styles.navLink}>Home</div>
-          <div className={styles.navLink}>Our Team</div>
-          <div className={styles.navLink}>Elections</div>
+          <div
+            onClick={() => window.location.assign("/")}
+            className={styles.navLink}
+          >
+            Home
+          </div>
+          <div
+            onClick={() => window.location.assign("/team")}
+            className={styles.navLink}
+          >
+            Our Team
+          </div>
         </div>
       </div>
     </div>
