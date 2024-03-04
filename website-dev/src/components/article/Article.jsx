@@ -10,16 +10,16 @@ const Article = ({ title, paragraph, children, width }) => {
         flexDirection: "column",
         width: w,
         maxWidth: w,
-        overflowWrap: "break-word",
         alignItems: "center",
         justifyContent: "center",
         color: "white",
         textAlign: "center",
       }}
-      className={styles.article}
     >
-      <div style={{ aspectRatio: 1, width: "40%" }}>{children}</div>
-      <h2 style={{ marginBottom: 0, marginTop: 0 }}>{title}</h2>
+      <div style={{ aspectRatio: 1, width: "40%", marginBottom: "0.4rem" }}>
+        {children}
+      </div>
+      <h2 style={{ marginBottom: 3, marginTop: 0 }}>{title}</h2>
       <p
         style={{
           marginTop: 0,
