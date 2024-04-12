@@ -7,6 +7,7 @@ import { BrowserRouter, createBrowserRouter, useFetcher } from 'react-router-dom
 import Home from './pages/Home';
 import Team from './pages/Team';
 import Candidates from './pages/Candidates';
+import ProfileForm from './pages/ProfileForm';
 
 function App() {
   const [scrollToFeatured, setScrollToFeatured] = React.useState(null);
@@ -23,6 +24,10 @@ function App() {
     {
       path: "/candidates",
       element: <Candidates />,
+    },
+    {
+      path: "/profile-form",
+      element: <ProfileForm />,
     },
   ])
   return (
