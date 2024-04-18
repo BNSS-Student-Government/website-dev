@@ -76,7 +76,7 @@ const ProfileForm = () => {
           // Handle any errors that occurred during the fetch
           console.error("Error uploading data:", error);
           setError(
-            "Error uploading data, please contact the elections committee"
+            "Error uploading data, please try again or contact the elections committee"
           );
         });
     }

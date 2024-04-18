@@ -48,6 +48,7 @@
     box-shadow: 0 0 10px 0 #00000029;
     backdrop-filter: blur(100px);
     min-height: 30rem;
+    margin-bottom: 3rem;
 }
 .input{
     border: 0.5px solid #2a71bd;
@@ -74,6 +75,7 @@
 .input::-ms-input-placeholder { /* Edge 12 -18 */
     color:  #2768aec9;
   }
+
 .input:hover{
     background-color: #00000043;
 }
