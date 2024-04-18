@@ -21,6 +21,11 @@ const ProfileForm = () => {
     setFile(event.target.files[0]);
   };
 
+  let currentDate = new Date();
+  let dueDate = new Date("2024-04-19T23:59:59");
+
+  const [portalOpen, setPortalOpen] = useState(currentDate < dueDate);
+
   const resolveForm = () => {
     if (
       !firstName ||
@@ -37,6 +42,12 @@ const ProfileForm = () => {
   };
 
   const handleSubmit = async () => {
+    let date = new Date();
+    if (date > dueDate) {
+      setError("The portal is closed for submissions");
+      window.location.reload();
+      return;
+    }
     if (resolveForm()) {
       const data = {
         firstName: firstName,
@@ -89,126 +100,133 @@ const ProfileForm = () => {
       <div className="card-header">
         <h2 className="title">Candidate Profile Submisson</h2>
       </div>
-      <div className="profile-form">
-        {!success ? (
-          <>
-            {" "}
-            <div className="name-inputs">
-              <input
-                className="input"
-                placeholder="First Name*"
-                onChange={(e) => setFirstName(e.target.value)}
-                value={firstName}
-              ></input>
-              <input
-                className="input"
-                placeholder="Last Name*"
-                onChange={(e) => setLastName(e.target.value)}
-                value={lastName}
-              ></input>
 
-              <select
-                className="input"
-                style={{ height: "2.4rem", width: "100%" }}
-                name="cars"
-                id="cars"
-                onChange={(e) => setPositon(e.target.value)}
-                value={position}
-              >
-                <option value="DEFAULT" selected disabled>
-                  Position*
-                </option>
-                <option value="p">President</option>
-                <option value="vp">Vice President</option>
-                <option value="s">Secretary</option>
-                <option value="pr">Public Relations Coordinator</option>
-                <option value="g">Grade Chair</option>
-                <option value="12">Grade 12/8 rep</option>
-                <option value="11">Grade 11 rep</option>
-                <option value="10">Grade 10 rep</option>
-                <option value="9">Grade 9 rep</option>
-              </select>
-            </div>
-            <div className="headshot">
-              <div className="sub">Upload a profile headshot!</div>
-              <BiSolidUserAccount id="icon-profile" size={50} />
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <input
-                  style={{ Width: "11rem", maxWidth: "80%" }}
-                  type="file"
-                  accept="image/*"
-                  onChange={handleFileChange}
-                />
-              </div>
-            </div>
-            <textarea
-              className="textarea"
-              name="taname"
-              id="taid"
-              rows="7"
-              wrap="soft"
-              maxLength="600"
-              placeholder="your vision for Burnaby North* (600 Characters MAX) ..."
-              onChange={(e) => setVision(e.target.value)}
-              value={vision}
-            ></textarea>
-            <textarea
-              className="textarea"
-              name="taname"
-              id="taid"
-              rows="7"
-              wrap="soft"
-              maxLength="600"
-              onChange={(e) => setExperience(e.target.value)}
-              value={experience}
-              placeholder="your leadership experience* (600 Characters MAX)..."
-            ></textarea>
-            <textarea
-              className="textarea"
-              name="taname"
-              id="taid"
-              rows="7"
-              wrap="soft"
-              maxLength="200"
-              onChange={(e) => setAdditional(e.target.value)}
-              value={additional}
-              placeholder="any other additional info (200 Characters MAX)..."
-            ></textarea>
-            <div
-              style={{
-                display: "flex",
-                width: "100%",
-                justifyContent: "center",
-              }}
-            >
-              <input
-                className="input"
-                placeholder="Campaign Video Link (YOUTUBE, VIMEO, OR GOOGLE DRIVE ONLY)"
-                onChange={(e) => setVideoLink(e.target.value)}
-              ></input>
-            </div>
-            <div className="error">{error}</div>
-            {loading ? (
-              <button className="submit-btn" disabled>
-                LOADING ...
-              </button>
+      <div className="profile-form">
+        {portalOpen ? (
+          <>
+            {!success ? (
+              <>
+                {" "}
+                <div className="name-inputs">
+                  <input
+                    className="input"
+                    placeholder="First Name*"
+                    onChange={(e) => setFirstName(e.target.value)}
+                    value={firstName}
+                  ></input>
+                  <input
+                    className="input"
+                    placeholder="Last Name*"
+                    onChange={(e) => setLastName(e.target.value)}
+                    value={lastName}
+                  ></input>
+
+                  <select
+                    className="input"
+                    style={{ height: "2.4rem", width: "100%" }}
+                    name="cars"
+                    id="cars"
+                    onChange={(e) => setPositon(e.target.value)}
+                    value={position}
+                  >
+                    <option value="DEFAULT" selected disabled>
+                      Position*
+                    </option>
+                    <option value="p">President</option>
+                    <option value="vp">Vice President</option>
+                    <option value="s">Secretary</option>
+                    <option value="pr">Public Relations Coordinator</option>
+                    <option value="g">Grade Chair</option>
+                    <option value="12">Grade 12/8 rep</option>
+                    <option value="11">Grade 11 rep</option>
+                    <option value="10">Grade 10 rep</option>
+                    <option value="9">Grade 9 rep</option>
+                  </select>
+                </div>
+                <div className="headshot">
+                  <div className="sub">Upload a profile headshot!</div>
+                  <BiSolidUserAccount id="icon-profile" size={50} />
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    <input
+                      style={{ Width: "11rem", maxWidth: "80%" }}
+                      type="file"
+                      accept="image/*"
+                      onChange={handleFileChange}
+                    />
+                  </div>
+                </div>
+                <textarea
+                  className="textarea"
+                  name="taname"
+                  id="taid"
+                  rows="7"
+                  wrap="soft"
+                  maxLength="600"
+                  placeholder="your vision for Burnaby North* (600 Characters MAX) ..."
+                  onChange={(e) => setVision(e.target.value)}
+                  value={vision}
+                ></textarea>
+                <textarea
+                  className="textarea"
+                  name="taname"
+                  id="taid"
+                  rows="7"
+                  wrap="soft"
+                  maxLength="600"
+                  onChange={(e) => setExperience(e.target.value)}
+                  value={experience}
+                  placeholder="your leadership experience* (600 Characters MAX)..."
+                ></textarea>
+                <textarea
+                  className="textarea"
+                  name="taname"
+                  id="taid"
+                  rows="7"
+                  wrap="soft"
+                  maxLength="200"
+                  onChange={(e) => setAdditional(e.target.value)}
+                  value={additional}
+                  placeholder="any other additional info (200 Characters MAX)..."
+                ></textarea>
+                <div
+                  style={{
+                    display: "flex",
+                    width: "100%",
+                    justifyContent: "center",
+                  }}
+                >
+                  <input
+                    className="input"
+                    placeholder="Campaign Video Link (YOUTUBE, VIMEO, OR GOOGLE DRIVE ONLY)"
+                    onChange={(e) => setVideoLink(e.target.value)}
+                  ></input>
+                </div>
+                <div className="error">{error}</div>
+                {loading ? (
+                  <button className="submit-btn" disabled>
+                    LOADING ...
+                  </button>
+                ) : (
+                  <button className="submit-btn" onClick={handleSubmit}>
+                    Submit Candidate Profile
+                  </button>
+                )}
+              </>
             ) : (
-              <button className="submit-btn" onClick={handleSubmit}>
-                Submit Candidate Profile
-              </button>
+              <h4>
+                Submission Successful, thank you for submitting your profile.
+                Good Luck!
+              </h4>
             )}
           </>
         ) : (
-          <h4>
-            Submission Successful, thank you for submitting your profile. Good
-            Luck!
-          </h4>
+          <h4>Can't Submit, the portal is closed for submissions</h4>
         )}
       </div>
     </div>
