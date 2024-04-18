@@ -8,6 +8,8 @@ import Home from './pages/Home';
 import Team from './pages/Team';
 import Candidates from './pages/Candidates';
 import ProfileForm from './pages/ProfileForm';
+import SecureVote from './pages/SecureVote';
+import ProfileFormExtended from './pages/ProfileFormExtended';
 
 function App() {
   const [scrollToFeatured, setScrollToFeatured] = React.useState(null);
@@ -29,11 +31,16 @@ function App() {
       path: "/profile-form",
       element: <ProfileForm />,
     },
+    {
+      path: "/profile-form/o23urln28823b2",
+      element: <ProfileFormExtended firstNameSet={"Ayati"} lastNameSet={"Arora"} positionSet={"10"}/>,
+    },
+  
   ])
   return (
    <div className='app'>
       <NavBar></NavBar>
-      <div className="container" style={{ padding: 0, width: "100%", margin: 0, maxWidth: "100%"}}>
+      <div className="container" style={{paddingTop: 0, width: "100%", margin: 0, maxWidth: "100%"}}>
         <RouterProvider router={router} />
       </div>
     </div>
