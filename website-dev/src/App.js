@@ -8,7 +8,6 @@ import Home from './pages/Home';
 import Team from './pages/Team';
 import Candidates from './pages/Candidates';
 import ProfileForm from './pages/ProfileForm';
-import SecureVote from './pages/SecureVote';
 import ProfileFormExtended from './pages/ProfileFormExtended';
 
 function App() {
