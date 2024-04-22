@@ -63,7 +63,7 @@ const CandidateModal = ({ open, onClose, candidate }) => {
             )}
           </div>
           <div id="right container" className={styles.modalRightContainer}>
-            <h3 style={{ marginTop: "-3rem", paddingTop: "0" }}>
+            <h3 style={{ marginTop: "0", paddingTop: "0" }}>
               {candidate &&
                 candidate.vision &&
                 makePosessive(candidate.firstName) +
