@@ -156,10 +156,17 @@
 /* media query for phones */
 @media (max-width: 959px) {
     .modalHeader{
-        height: 6rem;
+        height: 4rem;
+        min-height: 4rem;
     }
     .modal{
         width: 90%;
+        height: 90vh;
+        max-height: 90vh;
+        overflow: auto;
+    }
+    .modalTitle{
+        font-size: 1rem;
     }
     .infoContainer{
         width: 50%;
@@ -168,7 +175,11 @@
         width: 85%;
     }
     .modalRightContainer{
-        max-height: unset;
+        all: unset;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
     }
 }
 
