@@ -66,15 +66,17 @@ const CandidateModal = ({ open, onClose, candidate }) => {
           <div id="right container" className={styles.modalRightContainer}>
             <h3>
               {candidate &&
+                candidate.vision &&
                 makePosessive(candidate.firstName) +
                   " vision for Burnaby North:"}
             </h3>
-            <p>{candidate.vision}</p>
+            <p>{candidate && candidate.vision && candidate.vision}</p>
             <h3>
               {candidate &&
+                candidate.experience &&
                 makePosessive(candidate.firstName) + " leadership experience:"}
             </h3>
-            <p>{candidate.experience}</p>
+            <p>{candidate && candidate.experience && candidate.experience}</p>
             <h3>
               {candidate &&
                 candidate.additional &&
