@@ -33,10 +33,9 @@ const CandidateModal = ({ open, onClose, candidate }) => {
             <div id="img container" className={styles.imgContainer}>
               <img
                 src={
-                  candidate &&
-                  candidate.headshot &&
-                  candidate.headshot.data.attributes.url &&
-                  `https://hammerhead-app-gv2sy.ondigitalocean.app${candidate.headshot.data.attributes.url}`
+                  candidate && candidate.headshot && candidate.headshot.data
+                    ? `https://hammerhead-app-gv2sy.ondigitalocean.app${candidate.headshot.data.attributes.url}`
+                    : profile
                 }
                 alt={profile}
               />

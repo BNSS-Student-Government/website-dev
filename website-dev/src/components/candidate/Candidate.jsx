@@ -15,16 +15,20 @@ const Candidate = ({ candidate }) => {
   const handleMouseLeave = () => {
     setText("");
   };
-  const thumbnailImg =
-    candidate &&
-    candidate.headshot &&
-    candidate.headshot.data.attributes.formats.small
-      ? `https://hammerhead-app-gv2sy.ondigitalocean.app${candidate.headshot.data.attributes.formats.small.url}`
-      : candidate &&
-        candidate.headshot &&
-        candidate.headshot.data.attributes.formats.thumbnail
-      ? `https://hammerhead-app-gv2sy.ondigitalocean.app${candidate.headshot.data.attributes.formats.thumbnail.url}`
-      : profile;
+  const getThumbnailImg = () => {
+    if (!(candidate && candidate.headshot && candidate.headshot.data)) {
+      return profile;
+    }
+    if (candidate && candidate.headshot && candidate.headshot.data) {
+      if (candidate.headshot.data.attributes.formats.small) {
+        return `https://hammerhead-app-gv2sy.ondigitalocean.app${candidate.headshot.data.attributes.formats.small.url}`;
+      } else if (candidate.headshot.data.attributes.formats.thumbnail) {
+        return `https://hammerhead-app-gv2sy.ondigitalocean.app${candidate.headshot.data.attributes.formats.thumbnail.url}`;
+      }
+    }
+  };
+
+  const thumbnailImg = getThumbnailImg();
 
   console.log(thumbnailImg);
 
