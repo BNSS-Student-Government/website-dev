@@ -10,6 +10,7 @@ import Candidates from './pages/Candidates';
 import ProfileForm from './pages/ProfileForm';
 import ProfileFormExtended from './pages/ProfileFormExtended';
 
+
 function App() {
   const [scrollToFeatured, setScrollToFeatured] = React.useState(null);
 
@@ -43,7 +44,6 @@ function App() {
         <RouterProvider router={router} />
       </div>
     </div>
-
   );
 }
 

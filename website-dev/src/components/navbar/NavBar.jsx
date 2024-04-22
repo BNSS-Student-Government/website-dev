@@ -17,6 +17,12 @@ const NavBar = ({ scrollToFeatured }) => {
             Home
           </div>
           <div
+            onClick={() => window.location.assign("/candidates")}
+            className={styles.navLink}
+          >
+            2024 Candidates
+          </div>
+          <div
             onClick={() => window.location.assign("/team")}
             className={styles.navLink}
           >
