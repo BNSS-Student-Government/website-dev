@@ -80,7 +80,7 @@ const CandidateModal = ({ open, onClose, candidate }) => {
             <h3>
               {candidate &&
                 candidate.additional &&
-                "additional information " +
+                "Additional information " +
                   candidate.firstName +
                   " wants to share:"}
             </h3>
