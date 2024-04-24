@@ -34,7 +34,7 @@ const Candidates = () => {
   if (loading) {
     return (
       <div className={styles.page}>
-        <h1>2024 Elections Candidates</h1>
+        <h1 style={{ margin: "unset" }}>2024 Elections Candidates</h1>
         <button
           className={styles.btnMain}
           onClick={() => {
