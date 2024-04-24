@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Candidate from "../components/candidate/Candidate";
 import styles from "./styles/Candidates.module.css";
+import { FaVoteYea } from "react-icons/fa";
 
 const Candidates = () => {
   const [candidates, setCandidates] = useState(null);
@@ -34,6 +35,53 @@ const Candidates = () => {
     return (
       <div className={styles.page}>
         <h1>2024 Elections Candidates</h1>
+        <button
+          className={styles.btnMain}
+          onClick={() => {
+            window.location.assign("/secure-vote");
+          }}
+        >
+          <plaintext
+            style={{
+              margin: "unset",
+              padding: "unset",
+              marginTop: "0.1rem",
+              fontSize: "0.8rem",
+            }}
+          >
+            ready to vote?
+          </plaintext>
+          <div
+            id="main line"
+            style={{
+              display: "flex",
+              alignItem: "center",
+              justifyContent: "center",
+              gap: "0.5rem",
+            }}
+          >
+            <h3
+              id="vote text"
+              style={{
+                margin: "unset",
+                padding: "unset",
+              }}
+            >
+              {" "}
+              Cast your vote
+            </h3>
+            <div
+              id="vote icon"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                verticalAlign: "bottom",
+              }}
+            >
+              <FaVoteYea style={{ aspectRatio: "1", width: "1.4rem" }} />
+            </div>
+          </div>
+        </button>
         <div className={styles.positionsContainer}>
           <h2>President</h2>
           <div className={styles.sectionContainer}>
@@ -70,7 +118,54 @@ const Candidates = () => {
 
   return (
     <div className={styles.page}>
-      <h1>2024 Elections Candidates</h1>
+      <h1 style={{ margin: "unset" }}>2024 Elections Candidates</h1>
+      <button
+        className={styles.btnMain}
+        onClick={() => {
+          window.location.assign("/secure-vote");
+        }}
+      >
+        <plaintext
+          style={{
+            margin: "unset",
+            padding: "unset",
+            marginTop: "0.1rem",
+            fontSize: "0.8rem",
+          }}
+        >
+          ready to vote?
+        </plaintext>
+        <div
+          id="main line"
+          style={{
+            display: "flex",
+            alignItem: "center",
+            justifyContent: "center",
+            gap: "0.5rem",
+          }}
+        >
+          <h3
+            id="vote text"
+            style={{
+              margin: "unset",
+              padding: "unset",
+            }}
+          >
+            {" "}
+            Cast your vote
+          </h3>
+          <div
+            id="vote icon"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              verticalAlign: "bottom",
+            }}
+          >
+            <FaVoteYea style={{ aspectRatio: "1", width: "1.4rem" }} />
+          </div>
+        </div>
+      </button>
       <div className={styles.positionsContainer}>
         <h2>President</h2>
         <div className={styles.sectionContainer}>

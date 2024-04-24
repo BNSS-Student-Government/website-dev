@@ -9,6 +9,7 @@ import Team from './pages/Team';
 import Candidates from './pages/Candidates';
 import ProfileForm from './pages/ProfileForm';
 import ProfileFormExtended from './pages/ProfileFormExtended';
+import SecureVote from './pages/SecureVote';
 
 
 function App() {
@@ -35,7 +36,10 @@ function App() {
       path: "/profile-form/o23urln28823b2",
       element: <ProfileFormExtended firstNameSet={"Ayati"} lastNameSet={"Arora"} positionSet={"10"}/>,
     },
-  
+    {
+      path: "/secure-vote",
+      element: <SecureVote/>,
+    },
   ])
   return (
    <div className='app'>

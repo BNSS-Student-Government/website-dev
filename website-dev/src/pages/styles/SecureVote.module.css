@@ -1,0 +1,21 @@
+.btnMain{
+    display: flex;
+    flex-direction: column;
+    all: unset;
+    cursor: pointer;
+    background: #FF6D44;
+    background: linear-gradient(to bottom right, #FF6D44 0%, #FFAE00 100%);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem 2rem;
+    color: white;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.btnMain:hover{
+    background: #FF6D44;
+    background: linear-gradient(to bottom right, #FF6D44 0%, #FFAE00 80%);
+    transition: all 0.3s ease;
+}

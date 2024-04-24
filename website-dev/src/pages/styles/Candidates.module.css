@@ -3,10 +3,11 @@
     display: flex;
     height: fit-content;
     width: 100vw;
-    padding-top: 4rem;
+    padding-top: 5rem;
     padding-bottom: 4rem;
     align-items: center;
     flex-direction: column;
+    gap: 1.5rem;
     background-color: black;
     color: white;
     text-align: center;
@@ -19,9 +20,9 @@
     flex-wrap: wrap;
     color: black;
     background-color: white;
-    border-radius: 1rem;
     width: 80%;
     text-align: center;
+    border-radius: 10px;
 }
 .sectionContainer{
     display: flex;
@@ -33,5 +34,29 @@
     width: 100%;
     gap: 0rem;
     background-color: rgb(238, 238, 238);
-    border-radius: 20px;
+}
+
+.btnMain{
+    display: flex;
+    flex-direction: column;
+    all: unset;
+    cursor: pointer;
+    background: #FF6D44;
+    background: linear-gradient(to bottom right, #FF6D44 0%, #FFAE00 100%);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 1.1rem;
+    padding-top: 0.3rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    color: white;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.btnMain:hover{
+    background: #FF6D44;
+    background: linear-gradient(to bottom right, #FF6D44 0%, #FFAE00 80%);
+    transition: all 0.3s ease;
 }
