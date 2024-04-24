@@ -1,3 +1,19 @@
+.page{
+    background-color: #121212;
+    width: clac(100% - 2rem);
+    min-height: 100vh;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color:#ff8944;;
+    gap: 2rem;
+    text-align: center;
+}
+
 .btnMain{
     display: flex;
     flex-direction: column;
@@ -14,8 +30,43 @@
     transition: all 0.3s ease;
 }
 
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    max-width:400px;
+    padding: 1rem;
+    background-color: rgb(42, 42, 42);
+    border-radius: 10px;
+    color: white;
+}
+
 .btnMain:hover{
     background: #FF6D44;
     background: linear-gradient(to bottom right, #FF6D44 0%, #FFAE00 80%);
+    transition: all 0.3s ease;
+}
+
+.btnVote{
+    display: flex;
+    flex-direction: column;
+    all: unset;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem 0rem;
+    color: white;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    /* define a border with color #00000044 and width 1px*/
+    border: 1px solid #202020;
+    width: 100%;
+}
+
+.btnVote:hover{
+    background: #202020;
     transition: all 0.3s ease;
 }

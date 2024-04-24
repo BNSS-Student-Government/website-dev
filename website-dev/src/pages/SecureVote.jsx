@@ -10,6 +10,35 @@ const SecureVote = () => {
   /* voting closes April 26th of April at 11:59AM */
   const votingCloseDate = new Date("2024-04-26T11:59:00");
 
+  const gr8link = "https://forms.office.com/r/BCXwmvcDWC";
+  const gr9link = "https://forms.office.com/r/RapBFPticA";
+  const gr10link = "https://forms.office.com/r/Xs7MeBukXM";
+  const gr11link = "https://forms.office.com/r/fhxJ7tmmft";
+
+  const handleClick = (grade) => {
+    /* switch case for grade */
+    switch (grade) {
+      case 8:
+        window.open(gr8link, "_blank");
+        console.log("Grade 8");
+        break;
+      case 9:
+        window.open(gr9link, "_blank");
+        console.log("Grade 9");
+        break;
+      case 10:
+        window.open(gr10link, "_blank");
+        console.log("Grade 10");
+        break;
+      case 11:
+        window.open(gr11link, "_blank");
+        console.log("Grade 11");
+        break;
+      default:
+        break;
+    }
+  };
+
   // before voting period
   if (currentDate < votingOpenDate) {
     return (
@@ -73,11 +102,24 @@ const SecureVote = () => {
 
   // during voting period
   return (
-    <div>
-      <h1>Secure-Vote</h1>
-      <h3>Please Select Grade</h3>
+    <div className={styles.page}>
+      <h1 style={{ margin: "unset" }}>Voting Portal is Now Open!</h1>
+      <div className={styles.container}>
+        <h3>Please Select Grade to Cast Your Votes</h3>
+        <button className={styles.btnVote} onClick={() => handleClick(8)}>
+          Grade 8
+        </button>
+        <button className={styles.btnVote} onClick={() => handleClick(9)}>
+          Grade 9
+        </button>
+        <button className={styles.btnVote} onClick={() => handleClick(10)}>
+          Grade 10
+        </button>
+        <button className={styles.btnVote} onClick={() => handleClick(11)}>
+          Grade 11
+        </button>
+      </div>
     </div>
   );
 };
-
 export default SecureVote;
