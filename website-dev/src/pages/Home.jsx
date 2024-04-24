@@ -93,7 +93,7 @@ const Home = ({ setScrollToFeatured }) => {
             onClick={() => window.location.assign("/Candidates")}
             className="info-btn"
           >
-            <h2>View Candidates</h2>
+            <h2>View Candidates and Vote!</h2>
             <IoIosPeople id="icon" />
           </div>
         </div>

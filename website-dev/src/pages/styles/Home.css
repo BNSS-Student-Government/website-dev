@@ -107,8 +107,9 @@
     }
 } 
 .info-btn{
-    width: 300px;
+    width: calc(300px - 2rem);
     height: 300px;
+    padding: 0 1rem;
     aspect-ratio: 1;
     display: flex;
     flex-direction: column;
@@ -120,7 +121,8 @@
     border-color:  #ff8944;
     border-style: solid;
     border-radius: 2rem;
-    color:#ff8944
+    color:#ff8944;
+    text-align: center;
 }
 @media (max-width: 320px){
     .info-btn{
