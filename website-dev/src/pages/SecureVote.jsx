@@ -6,9 +6,9 @@ const SecureVote = () => {
   const [stage, setStage] = useState(0);
   const currentDate = new Date();
   /* voting open April 26th of April at 7:00AM */
-  const votingOpenDate = new Date("2024-04-26T07:00:00");
+  const votingOpenDate = new Date("2024-04-26T07:30:00");
   /* voting closes April 26th of April at 11:59AM */
-  const votingCloseDate = new Date("2024-04-26T11:59:00");
+  const votingCloseDate = new Date("2024-04-26T10:37:00");
 
   const gr8link = "https://forms.office.com/r/BCXwmvcDWC";
   const gr9link = "https://forms.office.com/r/RapBFPticA";
