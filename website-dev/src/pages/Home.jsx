@@ -32,7 +32,7 @@ const Home = ({ setScrollToFeatured }) => {
     {
       logo: <RiMegaphoneFill style={{ width: "80%", height: "80%" }} />,
       title: "Advocacy",
-      body: "As an elected body, we take our roles as student representatives very seriously. From town halls to grade councils, we are here to amplify students' voices and advocate for the needs of our community.",
+      body: "As an elected body, we take our roles as student representatives seriously. From town halls to grade councils, we are here to amplify students' voices and advocate for the needs of our community.",
     },
   ];
   return (
