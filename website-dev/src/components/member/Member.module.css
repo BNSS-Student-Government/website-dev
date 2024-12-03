@@ -3,7 +3,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: rgb(255, 255, 255)
+    color: rgb(255, 255, 255);
+    width: 17rem;
 }
 .img{
     width: 150px;
