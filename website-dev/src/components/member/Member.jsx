@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Member.module.css";
 
 const Member = ({ name, position }) => {
-  const img = require(`../../../public/assets/members-photos/${name}.jpg`);
+  const img = require(`../../../public/assets/members-photos/${name}.JPG`);
   return (
     <div className={styles.member}>
       <img className={styles.img} src={img} alt="Avatar" />
