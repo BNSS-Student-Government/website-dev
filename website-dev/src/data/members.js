@@ -24,5 +24,6 @@ export const membersArr = [
     { name: "Mischa Uy", position: "Member at Large" },
     { name: "Reza Shivji", position: "Member at Large" },
     { name: "Sofia Chin", position: "Member at Large" },
+    { name: "Yolanda He", position: "Member at Large" },
   ];
   
