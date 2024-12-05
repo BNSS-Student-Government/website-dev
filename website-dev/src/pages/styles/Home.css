@@ -30,7 +30,8 @@
 }
 
 .about-heading{
-    margin: 2rem 0;
+    margin-top: 0rem;
+    margin-bottom: 2rem;
     text-align: center;
     justify-content: center;
     display: flex;
@@ -39,8 +40,9 @@
 
 
 .gradient-heading{
-    background: #FF6D44;
-    background: linear-gradient(to bottom right, #FF6D44 0%, #FFAE00 100%);
+    font-size: 40px; 
+    font-family: Georgia, serif;
+    background: #eda323;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -49,8 +51,8 @@
     width: 100%;
     height: 100%;
     aspect-ratio: 1;
-    background: #FF6D44;
-    background: linear-gradient(to bottom right, #FF6D44 0%, #FFAE00 100%);
+    background: #eda323;
+    background: linear-gradient(to bottom right, #f4cd2a  0%, #eda323 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -64,7 +66,8 @@
     gap: 3rem;
     align-items: center;
     justify-content: center;
-    padding: 4rem 0;
+    padding-bottom: 3rem;
+    padding-top: 0rem
 }
 @media (max-width: 768px){
     .about-details{

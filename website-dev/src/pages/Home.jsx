@@ -27,7 +27,7 @@ const Home = ({ setScrollToFeatured }) => {
     {
       logo: <MdGroups3 style={{ width: "80%", height: "80%" }} />,
       title: "Community",
-      body: "Nothing is more important than community. We act as a bridge between students from various backgrounds and experiences. Through team activities and spirit weeks, we aim to foster a welcoming environment for all.",
+      body: "We act as a bridge between students from various backgrounds and experiences. Through team activities and spirit weeks, we aim to foster a welcoming environment and community for all.",
     },
     {
       logo: <RiMegaphoneFill style={{ width: "80%", height: "80%" }} />,
@@ -40,7 +40,7 @@ const Home = ({ setScrollToFeatured }) => {
       <Hero
         imageName="newschool.png"
         title="Burnaby North Student Government"
-        subTitle="Elections Now Open"
+        subTitle="2024 - 2025"
       >
         <button className="btn-down-arrow" onClick={() => scroll(featured)}>
           <SlArrowDown id="icon" />
@@ -51,7 +51,7 @@ const Home = ({ setScrollToFeatured }) => {
         ref={about}
         className="about"
         style={{
-          paddingTop: "4rem",
+          paddingTop: "2rem",
           alignItems: "center",
           display: "flex",
           flexDirection: "column",
@@ -72,11 +72,13 @@ const Home = ({ setScrollToFeatured }) => {
       </div>
       <div ref={featured} className="featured">
         <div className="featured-heading">
-          <h1 style={{ color: "#ff8944" }}>CURRENTLY FEATURED</h1>
+          <h1 style={{ color: "#eda323" }}>CURRENTLY FEATURED</h1>
           <h2 style={{ margin: "unset", fontWeight: "200" }}>
-            Student Governemnt Elections
+            None at this time
           </h2>
         </div>
+        </div>
+        {/*
         <div className="featured-details">
           <div style={{ fontSize: "1.1rem" }}>
             The halls of Burnaby North Secondary School are pulsating with
@@ -98,6 +100,7 @@ const Home = ({ setScrollToFeatured }) => {
           </div>
         </div>
       </div>
+      */}
     </>
   );
 };
