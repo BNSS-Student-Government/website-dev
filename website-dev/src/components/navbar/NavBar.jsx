@@ -20,12 +20,17 @@ const NavBar = ({ scrollToFeatured }) => {
             onClick={() => window.location.assign("/candidates")}
             className={styles.navLink}
           >
+          {/*
             2024 Elections
+          */}
+            
           </div>
+          
           <div
             onClick={() => window.location.assign("/team")}
             className={styles.navLink}
           >
+          
             Our Team
           </div>
         </div>
