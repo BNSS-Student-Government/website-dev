@@ -10,6 +10,11 @@ Make a fork as all changes are automatically deployed to production by Vercel.
 ## Are you a future Gov member who needs to update the website?
 - Find someone who knows React who can help you!
 
-## For Local Development
+## Setup & Development
+### Codespaces
+Create a new codespace. 
+Note that the actual node project is in /website-dev (you'll have to run `cd website-dev`).
+Run `npm run start` to start development! Open the forwarded port; the page will reload as you make changes.
 
-- Run w/ node on a personal device.
+### On Device
+Just do everything but locally. Make sure node is installed; site will be at http://localhost:8000/
