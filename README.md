@@ -17,4 +17,4 @@ Note that the actual node project is in /website-dev (you'll have to run `cd web
 Run `npm run start` to start development! Open the forwarded port; the page will reload as you make changes.
 
 ### On Device
-Just do everything but locally. Make sure node is installed; site will be at http://localhost:8000/
+Just do everything but locally. Make sure node is installed; site will be at http://localhost:3000/
