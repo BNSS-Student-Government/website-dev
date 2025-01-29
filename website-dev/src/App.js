@@ -8,9 +8,9 @@ import Home from './pages/Home';
 import Team from './pages/Team';
 import Candidates from './pages/Candidates';
 import ProfileForm from './pages/ProfileForm';
-import ProfileFormExtended from './pages/ProfileFormExtended';
+import ProfileFormExtended from './pages/DOES_NOT_WORK_ProfileFormExtended';
 import SecureVote from './pages/SecureVote';
-
+import {motion} from 'motion/react'
 
 function App() {
   const [scrollToFeatured, setScrollToFeatured] = React.useState(null);

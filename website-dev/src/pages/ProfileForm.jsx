@@ -17,12 +17,14 @@ const ProfileForm = () => {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
 
+  const STRAPI_URL = "https://govapi.peterpeterp.xyz"
+
   const handleFileChange = (event) => {
     setFile(event.target.files[0]);
   };
 
   let currentDate = new Date();
-  let dueDate = new Date("2024-04-19T23:59:59");
+  let dueDate = new Date("2025-04-19T23:59:59");
 
   const [portalOpen, setPortalOpen] = useState(currentDate < dueDate);
 
@@ -41,6 +43,67 @@ const ProfileForm = () => {
     return true;
   };
 
+  const uploadEntry = async () => {
+    try {
+      
+      const formData = new FormData();
+      
+      formData.append("files", file, file.name);
+      // upload file
+      const uploadResponse = await fetch(`${STRAPI_URL}/api/upload`, {
+        method: "post",
+        body: formData,
+      });
+  
+      // get result of upload
+      const uploadedImage = await uploadResponse.json();
+  
+      // if error
+      if (uploadedImage.error) {
+        throw new Error(uploadedImage.error.message);
+      }
+  
+      // create entry
+      const newEntry = {
+        data: {
+          firstName: firstName,
+          lastName: lastName,
+          position: position,
+          vision: vision,
+          experience: experience,
+          additional: additional,
+          videoLink: videoLink,
+          headshot: uploadedImage[0].id
+        },
+      };
+  
+      // Create entry API request
+      const response = await fetch(`${STRAPI_URL}/api/candidates`, {
+        method: "post",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newEntry),
+      });
+  
+      const result = await response.json();
+  
+      if (result.error) {
+        throw new Error(result.error.message);
+      }
+  
+      console.log("Profile uploaded successfully:", result);
+      setSuccess(true);
+      setError("");
+      return;
+    } catch (error) {
+      console.error("Error uploading data:", error);
+      setError(
+        "Error uploading data, please try again or contact the elections committee"
+      );
+    }
+  }
+
   const handleSubmit = async () => {
     let date = new Date();
     if (date > dueDate) {
@@ -49,47 +112,12 @@ const ProfileForm = () => {
       return;
     }
     if (resolveForm()) {
-      const data = {
-        firstName: firstName,
-        lastName: lastName,
-        position: position,
-        vision: vision,
-        experience: experience,
-        additional: additional,
-        videoLink: videoLink,
-      };
+      
       setLoading(true);
-      const formData = new FormData();
-      formData.append("data", JSON.stringify(data));
-      formData.append("files.headshot", file, file.name);
 
-      // Make a POST request to your backend endpoint
-      await fetch(
-        "https://hammerhead-app-gv2sy.ondigitalocean.app/api/candidates",
-        {
-          method: "POST",
-          body: formData,
-        }
-      )
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error("Network response was not ok");
-          }
-          return response.json(); // Assuming the backend returns JSON
-        })
-        .then((data) => {
-          // Handle the response from the backend
-          console.log("Data uploaded successfully:", data);
-          setSuccess(true);
-          setError("");
-        })
-        .catch((error) => {
-          // Handle any errors that occurred during the fetch
-          console.error("Error uploading data:", error);
-          setError(
-            "Error uploading data, please try again or contact the elections committee"
-          );
-        });
+      await uploadEntry();
+      
+
     }
     setLoading(false);
   };

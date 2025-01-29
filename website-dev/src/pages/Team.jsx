@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./styles/Team.module.css";
 import Member from "../components/member/Member";
 import { membersArr } from "../data/members";
+import { motion } from "motion/react"
 
 const Team = () => {
   return (

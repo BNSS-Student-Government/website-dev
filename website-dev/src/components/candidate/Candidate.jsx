@@ -16,14 +16,14 @@ const Candidate = ({ candidate }) => {
     setText("");
   };
   const getThumbnailImg = () => {
-    if (!(candidate && candidate.headshot && candidate.headshot.data)) {
+    if (!(candidate && candidate.headshot)) {
       return profile;
     }
-    if (candidate && candidate.headshot && candidate.headshot.data) {
-      if (candidate.headshot.data.attributes.formats.small) {
-        return `https://hammerhead-app-gv2sy.ondigitalocean.app${candidate.headshot.data.attributes.formats.small.url}`;
-      } else if (candidate.headshot.data.attributes.formats.thumbnail) {
-        return `https://hammerhead-app-gv2sy.ondigitalocean.app${candidate.headshot.data.attributes.formats.thumbnail.url}`;
+    if (candidate && candidate.headshot) {
+      if (candidate.headshot.formats.small) {
+        return `https://govapi.peterpeterp.xyz${candidate.headshot.formats.small.url}`;
+      } else if (candidate.headshot.formats.thumbnail) {
+        return `https://govapi.peterpeterp.xyz${candidate.headshot.formats.thumbnail.url}`;
       }
     }
   };

@@ -65,7 +65,7 @@ const ProfileFormExtended = ({ firstNameSet, lastNameSet, positionSet }) => {
 
       // Make a POST request to your backend endpoint
       await fetch(
-        "https://hammerhead-app-gv2sy.ondigitalocean.app/api/candidates",
+        "https://govapi.peterpeterp.xyz/api/candidates",
         {
           method: "POST",
           body: formData,
