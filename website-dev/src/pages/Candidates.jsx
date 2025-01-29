@@ -12,7 +12,7 @@ const Candidates = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://hammerhead-app-gv2sy.ondigitalocean.app/api/candidates?populate=*&pagination[pageSize]=100"
+          "https://govapi.peterpeterp.xyz/api/candidates?populate=*&pagination[pageSize]=100"
         ); // Replace with your API endpoint
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -172,11 +172,11 @@ const Candidates = () => {
           {candidates.data
             .filter(
               (candidate) =>
-                candidate.attributes.validated === true &&
-                candidate.attributes.position === "p"
+                candidate.validated === true &&
+                candidate.position === "p"
             )
             .map((candidate) => (
-              <Candidate key={candidate.id} candidate={candidate.attributes} />
+              <Candidate key={candidate.id} candidate={candidate} />
             ))}
         </div>
         <h2>Vice-President</h2>
@@ -184,11 +184,11 @@ const Candidates = () => {
           {candidates.data
             .filter(
               (candidate) =>
-                candidate.attributes.validated === true &&
-                candidate.attributes.position === "vp"
+                candidate.validated === true &&
+                candidate.position === "vp"
             )
             .map((candidate) => (
-              <Candidate key={candidate.id} candidate={candidate.attributes} />
+              <Candidate key={candidate.id} candidate={candidate} />
             ))}
         </div>
         <h2>Secretary</h2>
@@ -196,11 +196,11 @@ const Candidates = () => {
           {candidates.data
             .filter(
               (candidate) =>
-                candidate.attributes.validated === true &&
-                candidate.attributes.position === "s"
+                candidate.validated === true &&
+                candidate.position === "s"
             )
             .map((candidate) => (
-              <Candidate key={candidate.id} candidate={candidate.attributes} />
+              <Candidate key={candidate.id} candidate={candidate} />
             ))}
         </div>
         <h2>Public Relations Coordinator</h2>
@@ -208,11 +208,11 @@ const Candidates = () => {
           {candidates.data
             .filter(
               (candidate) =>
-                candidate.attributes.validated === true &&
-                candidate.attributes.position === "pr"
+                candidate.validated === true &&
+                candidate.position === "pr"
             )
             .map((candidate) => (
-              <Candidate key={candidate.id} candidate={candidate.attributes} />
+              <Candidate key={candidate.id} candidate={candidate} />
             ))}
         </div>
         <h2>Grad Chair</h2>
@@ -220,11 +220,11 @@ const Candidates = () => {
           {candidates.data
             .filter(
               (candidate) =>
-                candidate.attributes.validated === true &&
-                candidate.attributes.position === "g"
+                candidate.validated === true &&
+                candidate.position === "g"
             )
             .map((candidate) => (
-              <Candidate key={candidate.id} candidate={candidate.attributes} />
+              <Candidate key={candidate.id} candidate={candidate} />
             ))}
         </div>
         <h2>Grade 12/8 Rep</h2>
@@ -232,11 +232,11 @@ const Candidates = () => {
           {candidates.data
             .filter(
               (candidate) =>
-                candidate.attributes.validated === true &&
-                candidate.attributes.position === "12"
+                candidate.validated === true &&
+                candidate.position === "12"
             )
             .map((candidate) => (
-              <Candidate key={candidate.id} candidate={candidate.attributes} />
+              <Candidate key={candidate.id} candidate={candidate} />
             ))}
         </div>
         <h2>Grade 11 Rep</h2>
@@ -244,11 +244,11 @@ const Candidates = () => {
           {candidates.data
             .filter(
               (candidate) =>
-                candidate.attributes.validated === true &&
-                candidate.attributes.position === "11"
+                candidate.validated === true &&
+                candidate.position === "11"
             )
             .map((candidate) => (
-              <Candidate key={candidate.id} candidate={candidate.attributes} />
+              <Candidate key={candidate.id} candidate={candidate} />
             ))}
         </div>
         <h2>Grade 10 Rep</h2>
@@ -256,11 +256,11 @@ const Candidates = () => {
           {candidates.data
             .filter(
               (candidate) =>
-                candidate.attributes.validated === true &&
-                candidate.attributes.position === "10"
+                candidate.validated === true &&
+                candidate.position === "10"
             )
             .map((candidate) => (
-              <Candidate key={candidate.id} candidate={candidate.attributes} />
+              <Candidate key={candidate.id} candidate={candidate} />
             ))}
         </div>
         <h2>Grade 9 Rep</h2>
@@ -268,11 +268,11 @@ const Candidates = () => {
           {candidates.data
             .filter(
               (candidate) =>
-                candidate.attributes.validated === true &&
-                candidate.attributes.position === "9"
+                candidate.validated === true &&
+                candidate.position === "9"
             )
             .map((candidate) => (
-              <Candidate key={candidate.id} candidate={candidate.attributes} />
+              <Candidate key={candidate.id} candidate={candidate} />
             ))}
         </div>
       </div>
