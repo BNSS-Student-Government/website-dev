@@ -46,5 +46,7 @@
     align-items: center;
     height: 100%;
     cursor: pointer;
-    color: #ff8944
+    color: #ff8944;
+    font-family: "Inter";
+   
 }
