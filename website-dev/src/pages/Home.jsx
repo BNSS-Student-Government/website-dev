@@ -7,6 +7,7 @@ import { FaHandshake } from "react-icons/fa";
 import { MdGroups3 } from "react-icons/md";
 import { RiMegaphoneFill } from "react-icons/ri";
 import { IoIosPeople } from "react-icons/io";
+import Team from "./Team";
 
 const Home = ({ setScrollToFeatured }) => {
   const about = useRef(null);
@@ -70,7 +71,13 @@ const Home = ({ setScrollToFeatured }) => {
           ))}
         </div>
       </div>
-      <div ref={featured} className="featured">
+      <div ref={featured}>
+        <div className="featured-heading">
+          <h1 style={{ color: "#000000" }}>Student Government 2024/2025</h1>
+        </div>
+        <Team></Team>
+      </div>
+      {/*<div ref={featured} className="featured">
         <div className="featured-heading">
           <h1 style={{ color: "#eda323" }}>CURRENTLY FEATURED</h1>
           <h2 style={{ margin: "unset", fontWeight: "200" }}>
@@ -78,7 +85,7 @@ const Home = ({ setScrollToFeatured }) => {
           </h2>
         </div>
         </div>
-        {/*
+        {
         <div className="featured-details">
           <div style={{ fontSize: "1.1rem" }}>
             The halls of Burnaby North Secondary School are pulsating with
@@ -100,8 +107,9 @@ const Home = ({ setScrollToFeatured }) => {
           </div>
         </div>
       </div>
-      */}
+      }*/}
     </>
+    
   );
 };
 

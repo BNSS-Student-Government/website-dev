@@ -23,8 +23,8 @@ const Article = ({ title, paragraph, children, width }) => {
       <p
         style={{
           marginTop: 0,
-          fontFamily: "helvetica",
-          fontWeight: "100",
+          fontFamily: "Inter",
+          fontWeight: "300",
           fontSize: "1.1rem",
         }}
       >

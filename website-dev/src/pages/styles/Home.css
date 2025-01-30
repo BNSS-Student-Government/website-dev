@@ -41,8 +41,8 @@
 
 .gradient-heading{
     font-size: 40px; 
-    font-family: Georgia, serif;
-    background: #eda323;
+    font-family: "Inter", serif;
+    background: #ffffff;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -51,8 +51,8 @@
     width: 100%;
     height: 100%;
     aspect-ratio: 1;
-    background: #eda323;
-    background: linear-gradient(to bottom right, #f4cd2a  0%, #eda323 100%);
+    background: #FF6D44;
+    background: linear-gradient(to bottom right, #FF6D44  0%, #FFAE00 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
