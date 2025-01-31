@@ -3,7 +3,7 @@ import styles from "./Member.module.css";
 import { motion } from "motion/react"
 
 const Member = ({ name, position }) => {
-  const img = require(`../../../public/assets/members-photos-480p/${name}.jpg`);
+  const img = `/assets/members-photos-480p/${name}.jpg`;
   return (
     <motion.div 
       className={styles.member} 
