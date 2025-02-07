@@ -5,6 +5,7 @@ import { SlArrowDown } from "react-icons/sl"
 import { FaHandshake} from "react-icons/fa"
 import { MdGroups3 } from "react-icons/md";
 import { RiMegaphoneFill } from "react-icons/ri";
+import Team from "./Team";
  
 export default function Home() {
 
@@ -25,7 +26,7 @@ export default function Home() {
           <SlArrowDown className="w-10 h-10 hover:w-13 hover:h-13 hover:translate-y-2 transition-all" id="icon" />
         </button>
       </Hero>
-      <div ref={featured} className="flex flex-col justify-center items-center">
+      <div ref={featured}  className="flex flex-col justify-center items-center">
         <div className="mt-10">
           <h1 className="text-center text-3.5xl font-bold block p-5 intersect:animate-fade-down intersect-once">About Burnaby North's Student Government</h1>
         </div>
@@ -49,6 +50,10 @@ export default function Home() {
         </InfoCard>
         
       </div>
+      <div  className="mt-10 -mb-8">
+        <h1 className="text-center text-3.5xl font-bold block p-5 intersect:animate-fade-down intersect-once">Student Government 2024/2025</h1>
+      </div>
+      <Team></Team>
     </div>
   )
 }
