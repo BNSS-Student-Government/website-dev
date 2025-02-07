@@ -38,14 +38,12 @@ function getImageData(event: ChangeEvent<HTMLInputElement>) {
   }
 
 const formSchema = z.object({
-    firstName: z.string().min(2, {
-        message: "First Name must be at least 2 characters.",
-      }).max(30, {
+    firstName: z.string().min(1,{
+      message:"Required"
+    }).max(30, {
         message: "30 characters maximum.",
       }),
-      lastName: z.string().min(2, {
-        message: "Last Name must be at least 2 characters.",
-      }).max(30, {
+      lastName: z.string().min(1).max(30, {
         message: "30 characters maximum.",
       }),
       position: z.string({message: "Select your position!"}).min(1, {
@@ -54,18 +52,18 @@ const formSchema = z.object({
       headshot: z.instanceof(FileList, {
         message: "Upload a File!"
       }),
-      vision: z.string().min(10, {
-        message: "10-600 characters!",
+      vision: z.string().min(1,{
+        message:"Required"
       }).max(600, {
         message: "10-600 characters!"
       }),
-      experience: z.string().min(10, {
-        message: "10-600 characters!",
+      experience: z.string().min(1,{
+        message:"Required"
       }).max(600, {
         message: "10-600 characters!"
       }),
-      additional: z.string().min(10, {
-        message: "10-600 characters!",
+      additional: z.string().min(1,{
+        message:"Required"
       }).max(600, {
         message: "10-600 characters!"
       }),
@@ -80,11 +78,7 @@ export function SubmissionForm() {
 
     const form = useForm<z.infer<typeof formSchema>>({
       resolver: zodResolver(formSchema),
-      defaultValues: {
-        firstName: "",
-        lastName: "",
-        position: "",
-      },
+
     })
    
 
