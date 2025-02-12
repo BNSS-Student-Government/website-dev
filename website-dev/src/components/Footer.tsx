@@ -1,4 +1,4 @@
-import { SiGmail, SiInstagram } from "react-icons/si";
+import { SiGmail, SiInstagram, SiLinktree } from "react-icons/si";
 
 
 export default function Footer() {
@@ -19,6 +19,9 @@ export default function Footer() {
                 </a>
                 <a href="mailto:burnabynorthvikings@gmail.com" className="mx-2 text-muted-foreground transition-colors duration-300 hover:text-primary" aria-label="Email">
                     <SiGmail className="w-5 h-5"></SiGmail>
+                </a>
+                <a href="https://linktr.ee/burnabynorth" className="mx-1 text-muted-foreground transition-colors duration-300 hover:text-primary" aria-label="Linktree">
+                    <SiLinktree className="w-5 h-5"></SiLinktree>
                 </a>
                 
 
