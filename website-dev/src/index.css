@@ -53,14 +53,14 @@ button {
 
 @layer base {
   :root {
-    --background: 20 14.3% 4.1%;
-    --foreground: 60 9.1% 97.8%;
+    --background: 20 14.3% 4.1%; /*20 14.3% 4.1%;*/
+    --foreground: 60 9.1% 97.8%; /*60 9.1% 97.8%*/
     --card: 20 14.3% 4.1%;
     --card-foreground: 60 9.1% 97.8%;
     --popover: 20 14.3% 4.1%;
     --popover-foreground: 60 9.1% 97.8%;
-    /*--primary: 9, 93%, 25%;
-    --primary-hover: 20.5 90.2% 40.2%;*/    
+    /*--primary: hsl(220 84.2% 50.6%);
+    --primary-hover: 20.5 90.2% 40.2%;*/
     --primary: 32 84.2% 49.6%;
     --primary-hover: 32 84.2% 59.6%;
     --primary-foreground: 60 9.1% 97.8%;
