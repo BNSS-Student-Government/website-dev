@@ -14,13 +14,13 @@ export default function Footer() {
 
                 <p className="text-sm text-muted-foreground mx-2">Find Us: </p>
 
-                <a href="http://instagram.com/_u/burnabynorthsecondary/" className="mx-2 text-muted-foreground transition-colors duration-300 hover:text-primary" aria-label="Instagram">
+                <a href="http://instagram.com/_u/burnabynorthsecondary/" target="_blank" className="mx-2 text-muted-foreground transition-colors duration-300 hover:text-primary" aria-label="Instagram">
                     <SiInstagram className="w-5 h-5"></SiInstagram>
                 </a>
-                <a href="mailto:burnabynorthvikings@gmail.com" className="mx-2 text-muted-foreground transition-colors duration-300 hover:text-primary" aria-label="Email">
+                <a href="mailto:burnabynorthvikings@gmail.com" target="_blank" className="mx-2 text-muted-foreground transition-colors duration-300 hover:text-primary" aria-label="Email">
                     <SiGmail className="w-5 h-5"></SiGmail>
                 </a>
-                <a href="https://linktr.ee/burnabynorth" className="mx-1 text-muted-foreground transition-colors duration-300 hover:text-primary" aria-label="Linktree">
+                <a href="https://linktr.ee/burnabynorth" target="_blank" className="mx-1 text-muted-foreground transition-colors duration-300 hover:text-primary" aria-label="Linktree">
                     <SiLinktree className="w-5 h-5"></SiLinktree>
                 </a>
                 

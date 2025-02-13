@@ -26,9 +26,9 @@ export default function NavBar() {
             <a href="/team" className="flex w-full items-center py-2 text-lg font-medium">
               Our Team 24/25
             </a>
-            {/*<a href="/contact" className="flex w-full items-center py-2 text-lg font-medium">
-              Contact
-            </a>*/}
+            <a href="http://linktr.ee/burnabynorth" target="_blank" className="flex w-full items-center py-2 text-lg font-medium">
+              Find Us
+            </a>
           </div>
         </SheetContent>
       </Sheet>
@@ -49,12 +49,13 @@ export default function NavBar() {
         >
           Our Team 24/25
         </a>
-        {/*<a
-          href="/contact"
+        <a
+          href="http://linktr.ee/burnabynorth"
+          target="_blank"
           className="group inline-flex h-9 w-max items-center justify-center rounded-md  px-4 py-2 text-sm font-medium transition-colors hover:bg-primary"
         >
-          Contact
-        </a>*/}
+          Find Us
+        </a>
       </nav>
     </header>
   );
