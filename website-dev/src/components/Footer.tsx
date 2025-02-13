@@ -1,4 +1,5 @@
-import { SiGmail } from "react-icons/si";
+import { SiGmail, SiInstagram, SiLinktree } from "react-icons/si";
+
 
 export default function Footer() {
     return (
@@ -10,9 +11,19 @@ export default function Footer() {
             <p className="text-sm text-muted-foreground">© Copyright 2025. All Rights Reserved.</p>
 
             <div className="flex -mx-2">
-                <a href="mailto:burnabynorthvikings@gmail.com" className="mx-2 text-muted-foreground transition-colors duration-300 hover:text-primary" aria-label="Email">
+
+                <p className="text-sm text-muted-foreground mx-2">Find Us: </p>
+
+                <a href="http://instagram.com/_u/burnabynorthsecondary/" target="_blank" className="mx-2 text-muted-foreground transition-colors duration-300 hover:text-primary" aria-label="Instagram">
+                    <SiInstagram className="w-5 h-5"></SiInstagram>
+                </a>
+                <a href="mailto:burnabynorthvikings@gmail.com" target="_blank" className="mx-2 text-muted-foreground transition-colors duration-300 hover:text-primary" aria-label="Email">
                     <SiGmail className="w-5 h-5"></SiGmail>
                 </a>
+                <a href="https://linktr.ee/burnabynorth" target="_blank" className="mx-1 text-muted-foreground transition-colors duration-300 hover:text-primary" aria-label="Linktree">
+                    <SiLinktree className="w-5 h-5"></SiLinktree>
+                </a>
+                
 
                 {/*<a href="#" className="mx-2 text-muted-foreground transition-colors duration-300 hover:text-primary"  aria-label="Facebook">
                     <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none"

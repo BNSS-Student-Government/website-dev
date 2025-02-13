@@ -33,7 +33,7 @@ export default function Candidates() {
   const wireframe = [1,2,3,4];
   if (loading || candidates == undefined) {
     return (
-        <div className="flex absolute top-0 h-fit w-full items-center flex-col py-20 gap-6 bg-background text-foreground text-center">
+        <div className="flex top-0 h-fit w-full items-center flex-col py-20 gap-6 bg-background text-foreground text-center">
         <h1 className="text-center text-foreground text-3xl font-bold block p-5 animate-fade-down">
           2025 Elections Candidates
         </h1>
@@ -59,7 +59,7 @@ export default function Candidates() {
   }
 
   return (
-    <div className="flex absolute top-0 h-fit w-full items-center flex-col py-20 gap-6 bg-background text-foreground text-center">
+    <div className="flex top-0 h-fit w-full items-center flex-col py-20 gap-6 bg-background text-foreground text-center">
       <h1 className="text-center text-foreground text-3xl font-bold block p-5 animate-fade-down">
         2025 Elections Candidates
       </h1>
