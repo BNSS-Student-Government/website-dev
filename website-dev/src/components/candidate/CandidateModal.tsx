@@ -7,7 +7,7 @@ import { MouseEventHandler } from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { Button } from "../ui/button";
 
-export default function CandidateModal({ open, onClose, candidate }: {open: boolean, onClose: MouseEventHandler<Element>, candidate: CandidateData|undefined}) {
+export default function CandidateModal({ open, onClose, candidate, forceURL }: {open: boolean, onClose: MouseEventHandler<Element>, candidate: CandidateData|undefined, forceURL?: string}) {
   if (!open) return null;
 
   const makePosessive = (name: string) => {
@@ -27,7 +27,7 @@ export default function CandidateModal({ open, onClose, candidate }: {open: bool
       <div className="fixed top-0 left-0 w-full h-full z-[999] bg-black/50" onClick={onClose}></div>
       <div className="flex animate-fade flex-col justify-center items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] md:w-[70%] bg-foreground rounded-lg z-[1000] max-h-[90vh]">
         <div className="flex flex-row justify-end items-center py-4 w-full bg-background rounded-t-lg h-16">
-          <h2 className="text-foreground font-semibold text-lg md:text-2xl text-center left-1/2 fixed -translate-x-1/2">Candidate Profile</h2>
+          <h2 className="text-foreground font-semibold text-lg md:text-2xl text-center left-1/2 fixed -translate-x-1/2">Candidate Profile {forceURL? "Preview" : ""} </h2>
           <IoClose className="text-foreground text-2xl m-3 hover:text-foreground/50 cursor-pointer transition-all" onClick={onClose}></IoClose>
         </div>
         <div id="modal content" className="flex flex-row justify-center items-start p-4 gap-8 flex-wrap h-full w-full overflow-auto">
@@ -35,6 +35,8 @@ export default function CandidateModal({ open, onClose, candidate }: {open: bool
             <div id="img container" className="aspect-[5/6] w-full rounded-2xl overflow-hidden bg-[url(/assets/profile.png)] bg-center bg-foreground bg-no-repeat">
               <img className="w-full h-full object-cover"
                 src={
+                  forceURL ? forceURL :
+
                   candidate && candidate.headshot
                     ? `https://govapi.peterpeterp.xyz${candidate.headshot.url}`
                     : profile

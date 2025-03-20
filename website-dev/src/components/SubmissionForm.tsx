@@ -17,8 +17,8 @@ import {
 import { Input } from "@/components/ui/input"
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select"
 import { positions } from "@/data/positions"
-import { ChangeEvent, useState } from "react"
-import { Candidate } from "./candidate/Candidate"
+import { ChangeEvent, useEffect, useState } from "react"
+import { Candidate, CandidateData } from "./candidate/Candidate"
 import { Textarea } from "./ui/textarea"
 
 const STRAPI_URL = "https://govapi.peterpeterp.xyz"
@@ -75,12 +75,32 @@ export function SubmissionForm() {
     const [preview, setPreview] = useState("");
     const [error, setError] = useState("");
     const [success, setSuccess] = useState(false);
+    const [candidate, setCandidate] = useState<CandidateData | undefined>(undefined);
 
     const form = useForm<z.infer<typeof formSchema>>({
       resolver: zodResolver(formSchema),
 
     })
-   
+    
+    const watchedValues = form.watch();
+
+    // Update candidate state whenever the form changes
+    useEffect(() => {
+        setCandidate({
+            firstName: watchedValues.firstName,
+            lastName: watchedValues.lastName,
+            position: watchedValues.position,
+            vision: watchedValues.vision,
+            experience: watchedValues.experience,
+            additional: watchedValues.additional,
+            videoLink: watchedValues.videoLink,
+            id: 0,
+            documentId: "",
+            validated: true,
+            headshot: preview, 
+        });
+    }, [watchedValues, preview]);
+
 
     async function onSubmit(values: z.infer<typeof formSchema>) {
 
@@ -208,7 +228,7 @@ export function SubmissionForm() {
             />
             </div>
             <div className="flex flex-col justify-center items-center">
-            {preview !== "" ? <Candidate candidate={undefined} forceURL={preview}></Candidate>: <></>}
+            {preview !== "" ? <Candidate candidate={candidate} forceURL={preview}></Candidate>: <></>}
             </div>
                 
             <FormField
