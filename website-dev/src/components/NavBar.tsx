@@ -1,6 +1,7 @@
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { GiVikingHelmet } from "react-icons/gi";
+import { Link } from "react-router";
 
 export default function NavBar() {
   return (
@@ -23,6 +24,9 @@ export default function NavBar() {
             <a href="/" className="flex w-full items-center py-2 text-lg font-medium">
               Home
             </a>
+            <a href="/candidates" className="flex w-full items-center py-2 text-lg font-medium">
+              2025 Election Candidates
+            </a>
             <a href="/team" className="flex w-full items-center py-2 text-lg font-medium">
               Our Team 24/25
             </a>
@@ -42,6 +46,12 @@ export default function NavBar() {
           className="group inline-flex h-9 w-max items-center justify-center rounded-md  px-4 py-2 text-sm font-medium transition-colors hover:bg-primary"
         >
           Home
+        </a>
+        <a
+          href="/candidates"
+          className="group inline-flex h-9 w-max items-center justify-center rounded-md  px-4 py-2 text-sm font-medium transition-colors hover:bg-primary"
+        >
+          2025 Election Candidates
         </a>
         <a
           href="/team"
