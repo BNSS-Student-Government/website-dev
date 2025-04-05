@@ -3,10 +3,10 @@ import { BiSolidUserAccount } from "react-icons/bi";
 import { SubmissionForm } from "@/components/SubmissionForm";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 
-const ProfileForm = () => {
+const ProfileFormExtended = () => {
   
   let currentDate = new Date();
-  let dueDate = new Date("2025-04-04T23:59:59");
+  let dueDate = new Date("2025-04-09T23:59:59");
 
   const [portalOpen, setPortalOpen] = useState(currentDate < dueDate);
 
@@ -14,7 +14,7 @@ const ProfileForm = () => {
     <div className="flex flex-col items-center px-4 py-20 bg-background text-foreground w-full min-h-[80vh]">
         <Card className="w-full md:w-4/6 bg-foreground text-background">
             <CardHeader className="bg-primary rounded-t-lg mb-4">
-                <CardTitle className="text-2xl font-bold text-primary-foreground text-center">Candidate Profile Submission</CardTitle>
+                <CardTitle className="text-2xl font-bold text-primary-foreground text-center">Candidate Profile Submission - Extended Deadline</CardTitle>
             </CardHeader>
             <CardContent>
             {portalOpen ? (
@@ -44,4 +44,4 @@ const ProfileForm = () => {
   );
 };
 
-export default ProfileForm;
+export default ProfileFormExtended;

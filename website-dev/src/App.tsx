@@ -11,6 +11,7 @@ import Team from './pages/Team';
 import Footer from './components/Footer';
 import Candidates from './pages/Candidates';
 import ProfileForm from './pages/ProfileForm';
+import ProfileFormExtended from './pages/ProfileFormExtended';
 
 
 const pageVariants = {
@@ -32,6 +33,7 @@ function AnimatedRoutes() {
         <Route path="/team" element={<PageWrapper><Team /></PageWrapper>} />
         <Route path="/candidates" element={<PageWrapper><Candidates /></PageWrapper>} />
         <Route path="/profile-form" element={<PageWrapper><ProfileForm /></PageWrapper>} />
+        <Route path="/profile-form-extended" element={<PageWrapper><ProfileFormExtended /></PageWrapper>} />
         <Route path="*" element={<PageWrapper><NotFound /></PageWrapper>} />
           
       </Routes>
