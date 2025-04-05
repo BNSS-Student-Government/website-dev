@@ -9,3 +9,9 @@ export const positions = [
     {title: "Grade 10 Representative", id: "10"},
     {title: "Grade 9 Representative", id: "9"},
 ]
+
+export const posMap: Record<string, string> = {};
+
+for(let pos of positions){
+    posMap[pos.id] = pos.title;
+}

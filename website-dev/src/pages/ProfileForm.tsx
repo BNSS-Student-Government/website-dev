@@ -6,7 +6,7 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
 const ProfileForm = () => {
   
   let currentDate = new Date();
-  let dueDate = new Date("2025-04-19T23:59:59");
+  let dueDate = new Date("2025-04-17T23:59:59");
 
   const [portalOpen, setPortalOpen] = useState(currentDate < dueDate);
 
@@ -33,7 +33,7 @@ const ProfileForm = () => {
                     minute: 'numeric',
                     hour12: true,
                     } )}</h4>
-                    <h4 className="text-center">Contact the elections committee if you believe this is a mistsake.</h4>
+                    <h4 className="text-center">Contact the elections committee if you believe this is a mistake.</h4>
                     </>
                 )
             }
