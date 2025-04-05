@@ -36,7 +36,7 @@ export default function CandidateModal({ open, onClose, candidate, forceURL }: {
           <IoClose className="text-foreground text-2xl m-3 hover:text-foreground/50 cursor-pointer transition-all" onClick={onClose}></IoClose>
         </div>
         <div id="modal content" className="flex flex-row justify-center items-start p-4 gap-8 flex-wrap h-full w-full overflow-auto">
-          <div id="info container left" className="flex flex-col justify-center items-center my-4 w-1/2 md:w-1/3 max-h-[80vh] overflow-auto">
+          <div id="info container left" className="flex flex-col justify-center items-center my-4 w-3/4 md:w-1/3 max-h-[80vh] overflow-auto">
             <div id="img container" className="aspect-[5/6] w-full rounded-2xl overflow-hidden bg-[url(/assets/profile.png)] bg-center bg-foreground bg-no-repeat">
               <img className="w-full h-full object-cover"
                 src={
