@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 //import { FaVoteYea } from "react-icons/fa";
 import { positions } from "@/data/positions";
 import { Candidate, CandidatesData } from "@/components/candidate/Candidate";
+import { Separator } from "@/components/ui/separator";
 
 export default function Candidates() {
   const [candidates, setCandidates] = useState<CandidatesData>();
@@ -35,8 +36,9 @@ export default function Candidates() {
     return (
         <div className="flex top-0 h-fit w-full items-center flex-col py-20 gap-6 bg-background text-foreground text-center">
         <h1 className="text-center text-foreground text-3xl font-bold block p-5 animate-fade-down">
-          2025 Elections Candidates
+          2025 Election Candidates
         </h1>
+        
         {/*<VoteButton></VoteButton>*/}
         <div className="flex flex-col justify-center items-center flex-wrap bg-foreground text-background w-4/5 text-center rounded-lg">
              {positions.slice(0, 4).map(pos =>(
@@ -61,13 +63,14 @@ export default function Candidates() {
   return (
     <div className="flex top-0 h-fit w-full items-center flex-col py-20 gap-6 bg-background text-foreground text-center">
       <h1 className="text-center text-foreground text-3xl font-bold block p-5 animate-fade-down">
-        2025 Elections Candidates
+        2025 Election Candidates
       </h1>
       {/*<VoteButton></VoteButton>*/}
       <div className="flex flex-col justify-center items-center flex-wrap bg-foreground text-background w-full md:w-4/5 text-center md:rounded-lg">
         {positions.map(pos =>(
             <>
             <h2 className="text-center text-background text-2xl font-bold block p-5">{pos.title}</h2>
+            
             <div className="flex flex-row justify-center items-center flex-wrap text-background w-full gap-0 bg-background/5">
                 {candidates.data
                     .filter(

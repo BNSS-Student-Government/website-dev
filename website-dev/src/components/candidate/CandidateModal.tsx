@@ -6,6 +6,11 @@ import { CandidateData } from "./Candidate";
 import { MouseEventHandler } from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { Button } from "../ui/button";
+import ReactPlayer from 'react-player'
+import { Separator } from "@/components/ui/separator"
+import { posMap } from "@/data/positions";
+import { VideoPlayer } from "../VideoPlayer";
+
 
 export default function CandidateModal({ open, onClose, candidate, forceURL }: {open: boolean, onClose: MouseEventHandler<Element>, candidate: CandidateData|undefined, forceURL?: string}) {
   if (!open) return null;
@@ -44,6 +49,7 @@ export default function CandidateModal({ open, onClose, candidate, forceURL }: {
                 alt={profile}
               />
             </div>
+            
             <div
               style={{
                 justifyContent: "center",
@@ -53,39 +59,66 @@ export default function CandidateModal({ open, onClose, candidate, forceURL }: {
               }}
               id="name container"
             >
-              <h2 className="text-background font-bold text-2xl text-center my-2">
+              <h1 className="text-background font-bold text-3xl text-center mt-4 mb-2">
                 {candidate && candidate.firstName + " " + candidate.lastName}
-              </h2>
+              </h1>
             </div>
-            {candidate && candidate.videoLink && (
+            <Separator className="my-2 bg-primary h-1 rounded-sm" />
+            {/*candidate && candidate.videoLink && (
               <Button className="w-full h-12 font-semibold text-lg rounded-xl" 
               onClick={() => openNewTab(candidate.videoLink)}>
                 <FaExternalLinkAlt/> View Campaign Video
               </Button>
-            )}
+            )*/}
+            <div
+              style={{
+                justifyContent: "center",
+                display: "flex",
+                width: "100%",
+                textAlign: "center",
+              }}
+              id="name container"
+            >
+              <h1 className="text-muted font-bold text-xl text-center">
+                Running For {candidate && posMap[candidate.position]}
+              </h1>
+            </div>
           </div>
           <div id="right container" className="flex flex-col justify-start items-start w-full md:w-3/5 h-full md:my-4 max-h-[70vh] overflow-auto">
-            <h3 className="text-background font-bold text-xl">
+            <h3 className="text-background font-bold text-xl mb-2">
+              {candidate &&
+                candidate.videoLink &&
+                
+                  "Campaign Video"}
+            </h3>
+            <Separator className="mb-2 bg-primary h-1 rounded-sm" />
+            
+            <VideoPlayer url={candidate?.videoLink}></VideoPlayer>
+            <h3 className="text-background font-bold text-xl my-2">
               {candidate &&
                 candidate.vision &&
                 makePosessive(candidate.firstName) +
-                  " vision for Burnaby North:"}
+                  " vision for Burnaby North"}
             </h3>
-            <p className="text-background my-4">{candidate && candidate.vision && candidate.vision}</p>
-            <h3 className="text-background font-bold text-xl ">
+            <Separator className="mb-1 bg-muted-foreground h-0.5 rounded-sm" />
+            <p className="text-background my-2">{candidate && candidate.vision && candidate.vision}</p>
+            <h3 className="text-background font-bold text-xl my-2">
               {candidate &&
                 candidate.experience &&
-                makePosessive(candidate.firstName) + " leadership experience:"}
+                makePosessive(candidate.firstName) + " leadership experience"}
             </h3>
-            <p className="text-background my-4">{candidate && candidate.experience && candidate.experience}</p>
-            <h3 className="text-background font-bold text-xl">
+            <Separator className="mb-1 bg-muted-foreground h-0.5 rounded-sm" />
+            <p className="text-background my-2">{candidate && candidate.experience && candidate.experience}</p>
+            <h3 className="text-background font-bold text-xl my-2">
               {candidate &&
                 candidate.additional &&
                 "Additional information " +
                   candidate.firstName +
-                  " wants to share:"}
+                  " wants to share"}
             </h3>
-            <p className="text-background my-4">{candidate && candidate.additional && candidate.additional}</p>
+            <Separator className="mb-1 bg-muted-foreground h-0.5 rounded-sm" />
+            <p className="text-background my-2">{candidate && candidate.additional && candidate.additional}</p>
+            
           </div>
         </div>
       </div>

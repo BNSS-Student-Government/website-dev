@@ -330,7 +330,7 @@ export function SubmissionForm() {
                     <Input placeholder="https://www.youtube.com/..." {...field} />
                 </FormControl>
                 <FormDescription>
-                    Youtube, Vimeo, or Google Drive ONLY.
+                    Youtube, Vimeo, or Google Drive ONLY. Make sure your link is accessible to the public!
                 </FormDescription>
                 <FormMessage />
                 </FormItem>

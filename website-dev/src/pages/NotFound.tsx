@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero"
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router";
  
 export default function Home() {
 
@@ -9,7 +10,7 @@ export default function Home() {
     <div>
       <Hero title="Page Not Found" subTitle="">
         <Button asChild>
-          <a href="/">Take Me Back</a>
+          <Link viewTransition to="/">Take Me Back</Link>
         </Button>
       </Hero>
       
