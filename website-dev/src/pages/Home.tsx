@@ -1,11 +1,13 @@
 import Hero from "@/components/Hero"
 import InfoCard from "@/components/InfoCard";
 import { createRef } from "react";
-import { SlArrowDown } from "react-icons/sl"
+import { SlArrowDown, SlArrowRight } from "react-icons/sl"
 import { FaHandshake} from "react-icons/fa"
 import { MdGroups3 } from "react-icons/md";
 import { RiMegaphoneFill } from "react-icons/ri";
 import Team from "./Team";
+import { FiChevronsRight } from "react-icons/fi";
+import { Link } from "react-router";
  
 export default function Home() {
 
@@ -21,10 +23,11 @@ export default function Home() {
 
   return (
     <div>
-      <Hero title="Burnaby North Student Government" subTitle="2024 - 2025">
-        <button className="w-13 h-13 m-2 flex items-center justify-center text-foreground/50 hover:text-foreground" onClick={() => scroll(featured)}>
-          <SlArrowDown className="w-10 h-10 hover:w-13 hover:h-13 hover:translate-y-2 transition-all" id="icon" />
-        </button>
+      <Hero title="Burnaby North Student Government" subTitle="Elections Now Open">
+        <Link className="w-13 h-13 m-2 flex items-center justify-center text-foreground/50 hover:text-foreground hover:scale-125 transition-all" to="/candidates" viewTransition>
+          2025 Candidates
+          <FiChevronsRight className="w-10 h-10" id="icon" />
+        </Link>
       </Hero>
       <div ref={featured}  className="flex flex-col justify-center items-center">
         <div className="mt-10">
