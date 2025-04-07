@@ -102,14 +102,14 @@ export default function CandidateModal({ open, onClose, candidate, forceURL }: {
                   " vision for Burnaby North"}
             </h3>
             <Separator className="mb-1 bg-muted-foreground h-0.5 rounded-sm" />
-            <p className="text-background my-2">{candidate && candidate.vision && candidate.vision}</p>
+            <p className="text-background my-2 whitespace-pre-wrap">{candidate && candidate.vision && candidate.vision}</p>
             <h3 className="text-background font-bold text-xl my-2">
               {candidate &&
                 candidate.experience &&
                 makePosessive(candidate.firstName) + " leadership experience"}
             </h3>
             <Separator className="mb-1 bg-muted-foreground h-0.5 rounded-sm" />
-            <p className="text-background my-2">{candidate && candidate.experience && candidate.experience}</p>
+            <p className="text-background my-2 whitespace-pre-wrap">{candidate && candidate.experience && candidate.experience}</p>
             <h3 className="text-background font-bold text-xl my-2">
               {candidate &&
                 candidate.additional &&
@@ -118,7 +118,7 @@ export default function CandidateModal({ open, onClose, candidate, forceURL }: {
                   " wants to share"}
             </h3>
             <Separator className="mb-1 bg-muted-foreground h-0.5 rounded-sm" />
-            <p className="text-background my-2">{candidate && candidate.additional && candidate.additional}</p>
+            <p className="text-background my-2 whitespace-pre-wrap">{candidate && candidate.additional && candidate.additional}</p>
             
           </div>
         </div>
