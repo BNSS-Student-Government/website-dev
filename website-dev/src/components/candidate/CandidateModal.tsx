@@ -30,7 +30,8 @@ export default function CandidateModal({ open, onClose, candidate, forceURL }: {
   return ReactDom.createPortal(
     <>
       <div className="fixed top-0 left-0 w-full h-full z-[999] bg-black/50" onClick={onClose}></div>
-      <div className="flex animate-fade flex-col justify-center items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] md:w-[70%] bg-foreground rounded-lg z-[1000] max-h-[90vh]">
+      <div className="fixed inset-0 flex justify-center items-center z-[1000]">
+      <div className="flex animate-fade flex-col justify-center items-center fixed w-[90%] md:w-[70%] bg-foreground rounded-lg z-[1000] max-h-[90vh]">
         <div className="flex flex-row justify-end items-center py-4 w-full bg-background rounded-t-lg h-16">
           <h2 className="text-foreground font-semibold text-lg md:text-2xl text-center left-1/2 fixed -translate-x-1/2">Candidate Profile {forceURL? "Preview" : ""} </h2>
           <IoClose className="text-foreground text-2xl m-3 hover:text-foreground/50 cursor-pointer transition-all" onClick={onClose}></IoClose>
@@ -121,6 +122,7 @@ export default function CandidateModal({ open, onClose, candidate, forceURL }: {
             
           </div>
         </div>
+      </div>
       </div>
     </>,
     document.getElementById("portal") as HTMLElement
