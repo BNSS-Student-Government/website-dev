@@ -24,12 +24,13 @@ export default function Home() {
   return (
     <div>
       <Hero title="Burnaby North Student Government" subTitle="Elections Now Open">
-        <Link className="w-13 h-13 m-2 flex items-center justify-center text-foreground/50 hover:text-foreground hover:scale-125 transition-all" to="/candidates" viewTransition>
+        <Link className="w-13 h-13 m-5 flex items-center justify-center text-foreground text-3xl hover:text-primary hover:scale-125 transition-all" to="/candidates" viewTransition>
           2025 Candidates
           <FiChevronsRight className="w-10 h-10" id="icon" />
         </Link>
       </Hero>
-      <div ref={featured}  className="flex flex-col justify-center items-center">
+      
+      <div  className="flex flex-col justify-center items-center">
         <div className="mt-10">
           <h1 className="text-center text-3.5xl font-bold block p-5 intersect:animate-fade-down intersect-once">About Burnaby North's Student Government</h1>
         </div>
