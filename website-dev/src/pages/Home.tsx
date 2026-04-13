@@ -1,33 +1,27 @@
 import Hero from "@/components/Hero"
 import InfoCard from "@/components/InfoCard";
-import { createRef } from "react";
-import { SlArrowDown, SlArrowRight } from "react-icons/sl"
 import { FaHandshake} from "react-icons/fa"
 import { MdGroups3 } from "react-icons/md";
 import { RiMegaphoneFill } from "react-icons/ri";
 import Team from "./Team";
 import { FiChevronsRight } from "react-icons/fi";
-import { Link } from "react-router";
- 
+
 export default function Home() {
-
-  const featured = createRef<HTMLDivElement>();
-
-  const scroll = (ref: any) => {
-    window.scrollTo({
-      top: ref.current.offsetTop - convertRemToPixels(5),
-      behavior: "smooth",
-    });
-  };
-
+  window.location.replace("https://gov.bnss.ca");
 
   return (
     <div>
-      <Hero title="Burnaby North Student Government" subTitle="Elections Now Open">
-        <Link className="w-13 h-13 m-5 flex items-center justify-center text-foreground text-3xl hover:text-primary hover:scale-125 transition-all" to="/candidates" viewTransition>
-          2025 Candidates
-          <FiChevronsRight className="w-10 h-10" id="icon" />
-        </Link>
+      <Hero title="We've Moved!" subTitle="Redirecting you to gov.bnss.ca...">
+        <p className="text-foreground/70 text-lg mt-2 animate-fade-down text-center px-4">
+          The Burnaby North Student Government has a new home for 2025/2026.
+        </p>
+        <a
+          href="https://gov.bnss.ca"
+          className="mt-6 inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-lg font-semibold text-primary-foreground hover:scale-105 hover:brightness-110 transition-all animate-fade-up"
+        >
+          Visit gov.bnss.ca
+          <FiChevronsRight className="w-6 h-6" />
+        </a>
       </Hero>
       
       <div  className="flex flex-col justify-center items-center">
@@ -60,8 +54,4 @@ export default function Home() {
       <Team></Team>
     </div>
   )
-}
-
-function convertRemToPixels(rem: number) {    
-  return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
 }
